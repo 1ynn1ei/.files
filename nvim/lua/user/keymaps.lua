@@ -16,4 +16,6 @@ keymap("v", ">", ">gv", options)
 --  move text
 keymap("v", "<A-j>", ":m .+1<CR>==", options)
 keymap("v", "<A-k>", ":m .-2<CR>==", options)
-
+-- telescope
+keymap("n", "<leader>f", "<cmd>Telescope find_files theme=dropdown<cr>", options)
+keymap("n", "<leader>p", "<cmd> Telescope live_grep theme=dropdown<cr>", options)
