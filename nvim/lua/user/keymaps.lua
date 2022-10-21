@@ -14,10 +14,10 @@ keymap("n", "<C-l>", "<C-w-l>", options)
 keymap("v", "<", "<gv", options)
 keymap("v", ">", ">gv", options)
 --  move text
-keymap("v", "<A-j>", ":m .+1<CR>==", options)
-keymap("v", "<A-k>", ":m .-2<CR>==", options)
+keymap("v", "<C-j>", ":m .+1<CR>==", options)
+keymap("v", "<C-k>", ":m .-2<CR>==", options)
 -- telescope
-keymap("n", "<leader>f", "<cmd>Telescope find_files theme=dropdown<cr>", options)
+keymap("n", "<leader>f", "<cmd>Telescope find_files hidden=true theme=dropdown<cr>", options)
 keymap("n", "<leader>p", "<cmd>Telescope live_grep theme=dropdown<cr>", options)
 -- lsp
 keymap("n", "ga", "<cmd>lua vim.lsp.buf.code_action()<cr>", options)
