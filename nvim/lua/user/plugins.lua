@@ -65,6 +65,7 @@ return packer.startup(function(use)
     end
   }
   use "glepnir/dashboard-nvim"          -- dashboard
+  -- TODO: floatterm
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
