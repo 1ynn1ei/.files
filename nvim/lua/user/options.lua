@@ -1,6 +1,8 @@
 vim.opt.clipboard = "unnamedplus"  	-- disable * and + register
 vim.opt.cmdheight = 2
 vim.opt.fileencoding = "utf-8"
+vim.opt.completeopt={"menuone", "noinsert" ,"noselect"}
+vim.opt.shortmess:append "c"
 					-- ensure consistent split behavior
 vim.opt.splitbelow = true
 vim.opt.splitright = true
@@ -20,4 +22,3 @@ vim.opt.signcolumn = "yes"
 vim.opt.wrap = false
 vim.opt.sidescrolloff = 8
 					--
-

@@ -34,12 +34,13 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 db.custom_center = {
-	button("  ", "find                               ", "f", ":Telescope find_files theme=dropdown"),
-	button("  ", "search                             ", "/", ":Telescope live_grep theme=dropdown"),
+	button("  ", "find                               ", "f", ":Telescope find_files theme=dropdown"),
+	button("  ", "search                             ", "/", ":Telescope live_grep theme=dropdown"),
 	button("  ", "recent                             ", "r", ":Telescope oldfiles theme=dropdown"),
 	button("  ", "new                                ", "n", ":DashboardNewFile"),
+  button("  ",  "terminal                           ", "t", ":Fterm"),             
 	-- button("  ", "last session                       ", "l", ":SessionManager load_last_session"),
-	button("  ", "configure                          ", "c", ":Telescope find_files path="..home.."./dotfiles theme=dropdown"),
+	button("  ", "configure                          ", "c", ":Telescope find_files path="..home.."./dotfiles theme=dropdown"),
 	button("  ", "quit                               ", "q", ":qa"),
 }
 

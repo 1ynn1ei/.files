@@ -19,3 +19,12 @@ keymap("v", "<A-k>", ":m .-2<CR>==", options)
 -- telescope
 keymap("n", "<leader>f", "<cmd>Telescope find_files theme=dropdown<cr>", options)
 keymap("n", "<leader>p", "<cmd>Telescope live_grep theme=dropdown<cr>", options)
+-- lsp
+keymap("n", "ga", "<cmd>lua vim.lsp.buf.code_action()<cr>", options)
+keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<cr>", options)
+keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<cr>", options)
+keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<cr>", options)
+keymap("n", "g[", "<cmd>lua vim.diagnosticc.goto_prev()<cr>", options)
+keymap("n", "g]", "<cmd>lua vim.diagnostic.goto_next()<cr>", options)
+-- floaterm
+keymap("n", "<leader>t", "<cmd>Fterm<cr>", options)
