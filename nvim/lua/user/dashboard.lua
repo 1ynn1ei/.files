@@ -40,7 +40,7 @@ db.custom_center = {
 	button("  ", "new                                ", "n", ":DashboardNewFile"),
   button("  ",  "terminal                           ", "t", ":Fterm"),             
 	-- button("  ", "last session                       ", "l", ":SessionManager load_last_session"),
-	button("  ", "configure                          ", "c", ":Telescope find_files path="..home.."./dotfiles theme=dropdown"),
+	button("  ", "configure                          ", "c", ":Telescope find_files search_dirs="..home.."/.dotfiles/ theme=dropdown"),
 	button("  ", "quit                               ", "q", ":qa"),
 }
 
