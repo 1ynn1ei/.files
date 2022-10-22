@@ -47,4 +47,4 @@ db.custom_center = {
 db.preview_command = 'cat | lolcat -F 0.3'
 db.preview_file_path = home .. '/.config/nvim/static/neovim.cat'
 db.preview_file_height = 11
-db.preview_file_width = 86
+db.preview_file_width = 82

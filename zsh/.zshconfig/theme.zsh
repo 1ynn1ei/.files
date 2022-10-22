@@ -1,12 +1,13 @@
 # requires spectrum
 
 CURRENT_BG='NONE'
-SEGMENT_SEPARATOR=''
+SEGMENT_SEPARATOR=''
 USER_COLOR=234
 USER_ICON_COLOR=211
 GIT_DIRTY=214
 GIT_UPTODATE=108
-TEXT_COLOR=239
+GIT_TEXT_COLOR=234
+TEXT_COLOR=244
 DIR_COLOR=235
 # Begin a segment
 # Takes two arguments, background and foreground. Both can be omitted,
@@ -57,9 +58,9 @@ prompt_git() {
     dirty=$(parse_git_dirty)
     ref=$(git symbolic-ref HEAD 2> /dev/null) || ref="➦ $(git show-ref --head -s --abbrev |head -n1 2> /dev/null)"
     if [[ -n $dirty ]]; then
-      prompt_segment $GIT_DIRTY $TEXT_COLOR
+      prompt_segment $GIT_DIRTY $GIT_TEXT_COLOR
     else
-      prompt_segment $GIT_UPTODATE $TEXT_COLOR
+      prompt_segment $GIT_UPTODATE $GIT_TEXT_COLOR
     fi
     echo -n "${ref/refs\/heads\// }$dirty"
   fi
