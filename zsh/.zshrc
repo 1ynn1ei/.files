@@ -3,6 +3,7 @@
     git clone --depth 1 -- \
         https://github.com/marlonrichert/zsh-snap.git ~/Git/zsh-snap
 source ~/Git/zsh-snap/znap.zsh  # Start Znap
+source $HOME/.zshconfig/spectrum.zsh
 source $HOME/.zshconfig/theme.zsh
 source $HOME/.zshconfig/git.zsh
 
@@ -22,6 +23,7 @@ _weather_oneline() { curl -s _l "wttr.in/$@?m&format=2" }
 _gay() { $1 | lolcat -F 0.3 }
 
 # alias
+alias vim=nvim
 alias help='_help'
 alias weather='_weather'
 alias w='_weather_oneline'

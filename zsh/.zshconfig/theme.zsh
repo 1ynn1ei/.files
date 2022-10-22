@@ -1,7 +1,13 @@
+# requires spectrum
 
 CURRENT_BG='NONE'
-SEGMENT_SEPARATOR=''
-
+SEGMENT_SEPARATOR=''
+USER_COLOR=234
+USER_ICON_COLOR=211
+GIT_DIRTY=214
+GIT_UPTODATE=108
+TEXT_COLOR=239
+DIR_COLOR=235
 # Begin a segment
 # Takes two arguments, background and foreground. Both can be omitted,
 # rendering default background/foreground.
@@ -23,9 +29,9 @@ prompt_segment() {
 # End the prompt, closing any open segments
 prompt_end() {
   if [[ -n $CURRENT_BG ]]; then
-    echo -n " %{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR"
+    echo -n " %{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR "
   else
-    echo -n "%{%k%}"
+    echo -n "%{%k%} "
   fi
   echo -n "%{%f%}"
   CURRENT_BG=''
@@ -39,7 +45,7 @@ prompt_context() {
   local user=`whoami`
 
   if [[ "$user" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    prompt_segment black default "%(!.%{%F{yellow}%}.)ζ"
+    prompt_segment $USER_COLOR 230 "%(!.%{%F{$GIT_DIRTY}%}.)%{%F{$USER_ICON_COLOR}%} %{%f%}"
   fi
 }
 
@@ -51,9 +57,9 @@ prompt_git() {
     dirty=$(parse_git_dirty)
     ref=$(git symbolic-ref HEAD 2> /dev/null) || ref="➦ $(git show-ref --head -s --abbrev |head -n1 2> /dev/null)"
     if [[ -n $dirty ]]; then
-      prompt_segment yellow black
+      prompt_segment $GIT_DIRTY $TEXT_COLOR
     else
-      prompt_segment green black
+      prompt_segment $GIT_UPTODATE $TEXT_COLOR
     fi
     echo -n "${ref/refs\/heads\// }$dirty"
   fi
@@ -61,7 +67,7 @@ prompt_git() {
 
 # Dir: current working directory
 prompt_dir() {
-  prompt_segment blue black '%3~'
+  prompt_segment $DIR_COLOR $TEXT_COLOR '%3~'
   # prompt_segment blue black "…${PWD: -30}"
 }
 
