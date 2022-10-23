@@ -2,6 +2,7 @@
 [[ -f ~/Git/zsh-snap/znap.zsh ]] ||
     git clone --depth 1 -- \
         https://github.com/marlonrichert/zsh-snap.git ~/Git/zsh-snap
+
 source ~/Git/zsh-snap/znap.zsh  # Start Znap
 source $HOME/.zshconfig/spectrum.zsh
 source $HOME/.zshconfig/theme.zsh
@@ -29,6 +30,7 @@ alias help='_help'
 alias weather='_weather'
 alias w='_weather_oneline'
 alias gay='_gay'
+alias tree="tree -a -I 'target' -I '.git' -I 'node_modules'"
 #
 
 # Rust nonsense
