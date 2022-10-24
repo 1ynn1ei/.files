@@ -11,6 +11,10 @@ keymap("n", "<C-j>", "<C-w-j>", options)
 keymap("n", "<C-k>", "<C-w-k>", options)
 keymap("n", "<C-l>", "<C-w-l>", options)
 
+-- vertical nav, center screen
+keymap("n", "<C-d>", "<C-d>zz", options)
+keymap("n", "<C-b>", "<C-b>zz", options)
+
 -- indent
 keymap("v", "<", "<gv", options)
 keymap("v", ">", ">gv", options)
@@ -30,6 +34,9 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", options)
 keymap("n", "<leader>f", "<cmd>Telescope find_files hidden=true theme=dropdown<cr>", options)
 keymap("n", "<leader>p", "<cmd>Telescope live_grep theme=dropdown<cr>", options)
 
+-- tree view
+keymap("n", "<leader>vt", "<cmd>Neotree<cr>", options)
+
 -- lsp
 keymap("n", "ga", "<cmd>lua vim.lsp.buf.code_action()<cr>", options)
 keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<cr>", options)
@@ -37,6 +44,6 @@ keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<cr>", options)
 keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<cr>", options)
 keymap("n", "g[", "<cmd>lua vim.diagnostic.goto_prev()<cr>", options)
 keymap("n", "g]", "<cmd>lua vim.diagnostic.goto_next()<cr>", options)
-
+keymap("n", "<leader>r", "<cmd> lua vim.lsp.buf.rename()<cr>", options)
 -- floaterm
 keymap("n", "<leader>t", "<cmd>Fterm<cr>", options)
