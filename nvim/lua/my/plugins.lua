@@ -61,7 +61,6 @@ return packer.startup(function(use)
   use "nvim-treesitter/nvim-treesitter" -- syntax highlighting
   use "nvim-telescope/telescope.nvim"   -- fuzzy find
   use "nvim-lualine/lualine.nvim"       -- status line
-  use "nvim-neo-tree/neo-tree.nvim"     -- file tree
   use "dense-analysis/ale"              -- TODO: linter
   use { "numToStr/Comment.nvim",        -- commenter
     config = function()
@@ -70,6 +69,17 @@ return packer.startup(function(use)
   }
   use "glepnir/dashboard-nvim"          -- dashboard
   use "doums/floaterm.nvim"             -- terminal
+  -- writing
+  use { "folke/twilight.nvim",          -- highlight selected code
+    config = function()
+      require("twilight").setup{}
+    end
+  }
+  use { "folke/zen-mode.nvim",          -- center text
+    config = function()
+      require("zen-mode").setup{}
+    end
+  }
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
