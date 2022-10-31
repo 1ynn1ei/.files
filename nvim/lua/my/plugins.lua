@@ -75,11 +75,12 @@ return packer.startup(function(use)
       require("twilight").setup{}
     end
   }
-  use { "folke/zen-mode.nvim",          -- center text
-    config = function()
-      require("zen-mode").setup{}
-    end
-  }
+  use "folke/zen-mode.nvim"          -- center text
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  })
+  use "andrewferrier/wrapping.nvim"
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end

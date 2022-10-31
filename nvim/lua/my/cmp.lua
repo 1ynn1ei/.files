@@ -29,3 +29,7 @@ cmp.setup({
     { name = 'buffer' },
   },
 })
+
+cmp.setup.filetype('markdown', {
+  enabled = false
+})
