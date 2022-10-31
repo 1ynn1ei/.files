@@ -51,4 +51,3 @@ keymap("n", "<leader>t", "<cmd>Fterm<cr>", options)
 -- markdown
 keymap("n", "<leader>mm", "<cmd>MarkdownPreview<cr>", options)
 keymap("n", "<leader>mc", "<cmd>MarkdownPreviewStop<cr>", options)
-keymap("n", "<leader>wm", "<cmd>ZenMode<cr><cmd>MarkdownPreview<cr><cmd>Twilight<cr><cmd>SoftWrapMode<cr>", options)

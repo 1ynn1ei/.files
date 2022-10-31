@@ -1,13 +1,51 @@
-require("zen-mode").setup {
-  window = {
-    backdrop = 1.0,
-    width = 120,
+local keymap = vim.api.nvim_set_keymap
+local options = { noremap = true, silent = true, }
+
+require('true-zen').setup {
+  modes = {
+    ataraxis = {
+      minimum_writing_area = {
+        width = 80
+      }
+    }
   }
 }
 
-require("twilight").setup {
-}
+local function word_count()
+  return tostring(vim.fn.wordcount().words)
+end
 
-require("wrapping").setup()
-require("wrapping").set_mode_heuristically()  
-  
+local function raven_mode()
+  vim.opt_local.spell=true
+  vim.opt_local.spelllang='en_us'
+  -- local lualine_config = require('lualine').get_config()
+  require('lualine').setup{
+    sections = {
+      lualine_a = {'mode'},
+      lualine_b = {'filename'},
+      lualine_c = {},
+      lualine_x = {'location'},
+      lualine_y = {'progress'},
+      lualine_z = {word_count},
+    }
+  }
+  require('true-zen').ataraxis()
+  vim.api.nvim_set_hl(0, "StatusLineNC", {})
+  vim.api.nvim_set_hl(0, "NvimTreeStatusLineNC", {})
+  vim.cmd[[
+    SoftPencil
+    MarkdownPreview
+  ]]
+
+  -- vim.cmd[[
+  --      setlocal spell spelllang=en_us
+  --      Goyo 66
+  --      SoftPencil
+  --      echo "Prose Mode On"
+  -- ]]
+end
+
+vim.api.nvim_create_user_command('Raven', function(opts)
+  raven_mode(opts)
+end, { nargs = '*' })
+

@@ -12,6 +12,8 @@ brew 'tree'
 brew 'lolcat'
 brew 'neofetch'
 
+brew 'sdvc'
+
 brew 'gcc'
 brew 'lua'
 brew 'rust'
