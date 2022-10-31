@@ -20,8 +20,6 @@ brew 'node'
 brew 'ansible'
 brew 'docker'
 
-install mactex-no-gui
-
 tap 'homebrew/cask-fonts'
 cask 'font-fira-code'
 cask 'font-hack'
