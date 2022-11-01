@@ -3,6 +3,7 @@ tap 'homebrew/core'
 tap 'homebrew/services'
 
 brew 'git'
+brew 'svn' #literall just for fonts
 brew 'neovim'
 brew 'tmux'
 
@@ -27,5 +28,5 @@ cask 'font-fira-code'
 cask 'font-hack'
 cask 'font-inconsolata'
 cask 'font-meslo-lg-nerd-font'
-
+cask 'font-baskerville'
 
