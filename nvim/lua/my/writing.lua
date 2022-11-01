@@ -12,6 +12,9 @@ require('true-zen').setup {
       }
     }
   },
+  integrations = {
+    lualine = true
+  }
 }
 
 local function word_count()
@@ -30,22 +33,16 @@ local function raven_mode()
     lualine_y = {'progress'},
     lualine_z = {word_count},
   }
-  lualine_config.tabline = {}
-  require('lualine').setup(lualine_config)
+  require('lualine').hide()
   require('true-zen').ataraxis()
+  require('lualine').hide({ unhide = true })
+  require('lualine').setup(lualine_config)
   vim.api.nvim_set_hl(0, "StatusLineNC", {})
   vim.api.nvim_set_hl(0, "NvimTreeStatusLineNC", {})
   vim.cmd[[
     SoftPencil
     MarkdownPreview
   ]]
-
-  -- vim.cmd[[
-  --      setlocal spell spelllang=en_us
-  --      Goyo 66
-  --      SoftPencil
-  --      echo "Prose Mode On"
-  -- ]]
 end
 
 vim.api.nvim_create_user_command('Raven', function(opts)
