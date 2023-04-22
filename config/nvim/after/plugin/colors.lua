@@ -12,5 +12,5 @@ function ColorMyPencils(color)
         { bg = "none"}
     )
 end
-
+vim.g.ColorMyPencils = ColorMyPencils
 ColorMyPencils()
