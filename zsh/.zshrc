@@ -24,6 +24,7 @@ _weather() { curl -s -L "wttr.in/$@?m&Q" }
 _weather_oneline() { curl -s _l "wttr.in/$@?m&format=2" }
 _gay() { $1 | lolcat -F 0.3 }
 _gifify() { gifski --fps 20 -o $2.gif $1 }
+
 # alias
 alias vim=nvim
 alias help='_help'

@@ -9,13 +9,22 @@ install_if_not_exist() {
 }
 
 install_if_not_exist git
+install_if_not_exist zsh
 install_if_not_exist ripgrep
 install_if_not_exist stow
 install_if_not_exist fuse
-# etc 
+
+# default our shell
+chsh -s $(which zsh)
+zsh
+
+# install neovim
+wget https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
+chmod u+x nvim.appimage
+mv nvim.appimage/bin/nvim
+
+# link up our configs
 stow -v -R -t ~/.config config
 stow -v -R -t ~ zsh
 
-wget https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
-chmod u+x nvim.appimage
-mv nvim.appimage /bin/nvim
+
