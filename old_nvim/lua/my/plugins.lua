@@ -57,7 +57,6 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-path"                -- path completion
   use "hrsh7th/cmp-buffer"              -- ''
   use "bluz71/vim-moonfly-colors"       -- colorscheme
-  use "Mofiqul/dracula.nvim"
   use "nvim-treesitter/nvim-treesitter" -- syntax highlighting
   use "nvim-telescope/telescope.nvim"   -- fuzzy find
   use "nvim-lualine/lualine.nvim"       -- status line
@@ -68,7 +67,6 @@ return packer.startup(function(use)
     end
   }
   use "glepnir/dashboard-nvim"          -- dashboard
-  use "doums/floaterm.nvim"             -- terminal
   -- writing
   use { "folke/twilight.nvim",          -- highlight selected code
     config = function()
@@ -85,3 +83,4 @@ return packer.startup(function(use)
     require("packer").sync()
   end
 end)
+

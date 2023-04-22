@@ -45,8 +45,6 @@ keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<cr>", options)
 keymap("n", "g[", "<cmd>lua vim.diagnostic.goto_prev()<cr>", options)
 keymap("n", "g]", "<cmd>lua vim.diagnostic.goto_next()<cr>", options)
 keymap("n", "<leader>r", "<cmd> lua vim.lsp.buf.rename()<cr>", options)
--- floaterm
-keymap("n", "<leader>t", "<cmd>Fterm<cr>", options)
 
 -- markdown
 keymap("n", "<leader>mm", "<cmd>MarkdownPreview<cr>", options)
