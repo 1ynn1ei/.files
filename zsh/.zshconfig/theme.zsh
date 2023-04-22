@@ -46,7 +46,7 @@ prompt_context() {
   local user=`whoami`
 
   if [[ "$user" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    prompt_segment $USER_COLOR 230 "%(!.%{%F{$GIT_DIRTY}%}.)%{%F{$USER_ICON_COLOR}%}%{%f%}"
+    prompt_segment $USER_COLOR 230 "%(!.%{%F{$GIT_DIRTY}%}.)%{%F{$USER_ICON_COLOR}%}🌺%{%f%}"
   fi
 }
 

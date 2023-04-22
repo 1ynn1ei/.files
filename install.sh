@@ -13,3 +13,4 @@ install_if_not_exist ripgrep
 install_if_not_exist stow
 # etc 
 stow -v -R -t ~/.config config
+stow -v -R -t ~ zsh
