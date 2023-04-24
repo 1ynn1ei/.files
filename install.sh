@@ -5,17 +5,20 @@ install_if_not_exist() {
       return
     fi
   fi
-  apt install "$1" -y
+  sudo apt install "$1" -y
 }
 
-#install_if_not_exist git
-#install_if_not_exist zsh
-#install_if_not_exist ripgrep
-#install_if_not_exist stow
-#install_if_not_exist fuse
+install_if_not_exist git
+install_if_not_exist zsh
+install_if_not_exist ripgrep
+install_if_not_exist stow
+install_if_not_exist fuse
+
+# install rust
+curl https://sh.rustup.rs -sSf | sh -s -- -y
 
 # default our shell
-#chsh -s $(which zsh)
+chsh -s $(which zsh)
 
 # install neovim
 wget https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
