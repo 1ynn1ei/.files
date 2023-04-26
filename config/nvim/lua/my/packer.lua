@@ -71,11 +71,12 @@ return require('packer').startup(function(use)
         'rose-pine/neovim',
         as = 'rose-pine',
         config = function()
+            require('rose-pine').setup({ disable_italics = true })
             vim.cmd('colorscheme rose-pine')
         end
     })
-    
-    use {"lewis6991/gitsigns.nvim",  
+    use 'nvim-lualine/lualine.nvim'
+    use {'lewis6991/gitsigns.nvim',  
         config = function()
             require('gitsigns').setup()
         end
