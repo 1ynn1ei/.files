@@ -12,3 +12,4 @@ autocmd('BufWritePost', {
 		require('packer').sync()
 	end,
 })
+

@@ -58,7 +58,7 @@ return require('packer').startup(function(use)
             run = function()
               pcall(vim.cmd, 'MasonUpdate')
             end,
-          },
+          }, 
           {'williamboman/mason-lspconfig.nvim'}, -- Optional
       
           -- Autocompletion
@@ -70,17 +70,11 @@ return require('packer').startup(function(use)
     use ({
         'rose-pine/neovim',
         as = 'rose-pine',
-        config = function()
-            require('rose-pine').setup({ disable_italics = true })
-            vim.cmd('colorscheme rose-pine')
-        end
     })
     use 'nvim-lualine/lualine.nvim'
-    use {'lewis6991/gitsigns.nvim',  
-        config = function()
-            require('gitsigns').setup()
-        end
-    }
+    use 'numToStr/Comment.nvim'
+    use 'ThePrimeagen/refactoring.nvim'
+    use 'lewis6991/gitsigns.nvim'
     if packer_bootstrap then
         require('packer').sync()
     end
