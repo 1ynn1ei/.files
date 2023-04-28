@@ -5,7 +5,33 @@ lsp.preset('recommended')
 lsp.ensure_installed({
   'rust_analyzer'
 })
+
+lsp.on_attach(function(client, bufnr)
+  lsp.default_keymaps({buffer = bufnr})
+end)
+
 lsp.setup()
+
+local cmp = require('cmp')
+local cmp_action = lsp.cmp_action()
+
+require('luasnip.loaders.from_snipmate').lazy_load()
+
+cmp.setup({
+  mapping = {
+    ['<Tab>'] = cmp_action.luasnip_supertab(),
+    ['<CR>'] = cmp.mapping.confirm({select = false}),
+    ['<C-f>'] = cmp_action.luasnip_jump_forward(),
+    ['<C-b>'] = cmp_action.luasnip_jump_backward(),
+  },
+  sources = {
+    {name = 'path'},
+    {name = 'nvim_lsp'},
+    {name = 'buffer', keyword_length = 3},
+    {name = 'luasnip', keyword_length = 2},
+  }
+})
+
 
 local nvim_lsp = require'lspconfig'
 local capabilities = vim.lsp.protocol.make_client_capabilities()
