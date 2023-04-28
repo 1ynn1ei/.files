@@ -34,7 +34,3 @@ alias gay='_gay'
 alias tree="tree -a -I 'target' -I '.git' -I 'node_modules'"
 alias gifify='_gifify'
 #
-
-# Rust nonsense
-#export LIBRARY_PATH=$LIBRARY_PATH:$(brew --prefix)/lib:$(brew --prefix)/opt/sdl2/lib
-#export LIBRARY_PATH=$LIBRARY_PATH:$(brew --prefix)/lib:$(brew --prefix)/opt/sdl2_gfx/lib
