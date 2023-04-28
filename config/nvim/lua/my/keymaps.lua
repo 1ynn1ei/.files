@@ -35,7 +35,7 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", options)
 --keymap("n", "<leader>p", "<cmd>Telescope live_grep theme=dropdown<cr>", options)
 
 -- tree view
-keymap("n", "<leader>vt", "<cmd>Neotree<cr>", options)
+keymap("n", "<leader>tt", "<cmd>Neotree<cr>", options)
 
 -- lsp
 keymap("n", "ga", "<cmd>lua vim.lsp.buf.code_action()<cr>", options)
