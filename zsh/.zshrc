@@ -14,6 +14,7 @@ znap source zsh-users/zsh-syntax-highlighting
 export EDITOR=nvim
 export VISUAL=nvim
 
+export LD_LIBRARY_PATH=/usr/lib/wsl/lib/
 unsetopt BEEP       # fuck this
 setopt prompt_subst # make theme work
 setopt auto_cd      # very convenient
