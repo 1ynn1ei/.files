@@ -1,0 +1,24 @@
+[font]
+size = 7.0
+
+[font.bold]
+family = "Mononoki Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "Mononoki Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "Mononoki Nerd Font"
+style = "Regular"
+
+[window.padding]
+x = 1
+y = 1
+
+[shell]
+program = "/bin/zsh"
+
+[colors]
+draw_bold_text_with_bright_colors = true

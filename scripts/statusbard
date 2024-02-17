@@ -1,0 +1,18 @@
+#!/bin/sh
+
+SCRIPT=$(realpath "$0")
+SCRIPTPATH=$(dirname "$SCRIPT")
+
+. "$SCRIPTPATH/statusbar/date.sh"
+. "$SCRIPTPATH/statusbar/battery.sh"
+. "$SCRIPTPATH/statusbar/end.sh"
+
+test() {
+  bar=""
+  bar="$bar [$(battery)]"
+  bar="$bar [$(bar_date)]"
+  bar="$bar $(end) "
+  echo "$bar"
+}
+
+test

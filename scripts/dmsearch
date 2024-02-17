@@ -1,0 +1,23 @@
+#!/bin/sh
+
+BROWSER="qutebrowser"
+
+declare -a options=(
+"duckduckgo https://duckduckgo.com?q="
+"archwiki https://wiki.archlinux.org/index.php?search="
+"cdda http://cddawiki.chezzo.com/cdda_wiki/index.php?search="
+"wikipedia https://en.wikipedia.org/wiki"
+)
+
+while [ -z "$choice" ]; do
+  choicelist=$(printf "%s\n" "${options[@]}" | dmenu -i -l 10 -p "Search:") || exit
+  url=$(echo "$choicelist" | awk '{print $2}')
+  choice=$(echo "$choicelist" | awk '{print $1}')
+done
+
+while [ -z "$query" ]; do 
+  query=$(printf "%s" "$choice" | dmenu -i -l 10 -p "query:")
+done
+
+query="$(echo -n "${query}" | jq -s -R -r @uri)"
+$BROWSER "$url""$query"

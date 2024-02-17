@@ -1,0 +1,58 @@
+
+
+-----------------------------------------
+22:23:08.855 : Starting log.
+22:23:08.855 INFO : Cataclysm DDA version 0.G-6202-g5d069f2eac-dirty
+22:23:08.864 INFO : [main] C locale set to en_US.UTF-8
+22:23:08.864 INFO : [main] C++ locale set to en_US.UTF-8
+22:23:08.875 WARNING : opendir [/home/lynn/.config/cataclysm-dda/cache] failed with "No such file or directory".
+22:23:08.879 INFO : [options] C locale set to en_US.UTF-8
+22:23:08.879 INFO : [options] C++ locale set to en_US.UTF-8
+22:23:38.914 : Log shutdown.
+-----------------------------------------
+
+
+
+-----------------------------------------
+22:24:10.277 : Starting log.
+22:24:10.277 INFO : Cataclysm DDA version 0.G-6202-g5d069f2eac-dirty
+22:24:10.283 INFO : [main] C locale set to en_US.UTF-8
+22:24:10.283 INFO : [main] C++ locale set to en_US.UTF-8
+22:24:10.298 INFO : [options] C locale set to en_US.UTF-8
+22:24:10.298 INFO : [options] C++ locale set to en_US.UTF-8
+22:28:58.749 WARNING : opendir [/home/lynn/.local/share/cataclysm-dda/cache] failed with "No such file or directory".
+22:38:21.003 INFO : src/mod_tracker.h:68: Tried check if 'adult_basic_background' had a duplicate, but type 'profession_group' does not track object sources
+23:09:50.043 : Log shutdown.
+-----------------------------------------
+
+
+
+-----------------------------------------
+22:18:47.018 : Starting log.
+22:18:47.019 INFO : Cataclysm DDA version 0.G-6202-g5d069f2eac-dirty
+22:18:47.025 INFO : [main] C locale set to en_US.UTF-8
+22:18:47.025 INFO : [main] C++ locale set to en_US.UTF-8
+22:18:47.048 INFO : [options] C locale set to en_US.UTF-8
+22:18:47.048 INFO : [options] C++ locale set to en_US.UTF-8
+22:21:00.882 WARNING : recipe_subset deserialized invalid recipe_id 'null'
+22:42:26.304 : Log shutdown.
+-----------------------------------------
+
+
+
+-----------------------------------------
+12:08:55.022 : Starting log.
+12:08:55.022 INFO : Cataclysm DDA version 0.G-6202-g5d069f2eac-dirty
+12:08:55.028 INFO : [main] C locale set to en_US.UTF-8
+12:08:55.028 INFO : [main] C++ locale set to en_US.UTF-8
+12:08:55.050 INFO : [options] C locale set to en_US.UTF-8
+12:08:55.050 INFO : [options] C++ locale set to en_US.UTF-8
+
+
+-----------------------------------------
+19:58:53.486 : Starting log.
+19:58:53.487 INFO : Cataclysm DDA version 0.G-6202-g5d069f2eac-dirty
+19:58:53.493 INFO : [main] C locale set to en_US.UTF-8
+19:58:53.493 INFO : [main] C++ locale set to en_US.UTF-8
+19:58:53.514 INFO : [options] C locale set to en_US.UTF-8
+19:58:53.515 INFO : [options] C++ locale set to en_US.UTF-8
