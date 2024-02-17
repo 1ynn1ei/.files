@@ -1,0 +1,39 @@
+#OLD
+set notification-error-bg       "#ff5555" # Red
+set notification-error-fg       "#f8f8f2" # Foreground
+set notification-warning-bg     "#ffb86c" # Orange
+set notification-warning-fg     "#44475a" # Selection
+set notification-bg             "#282a36" # Background
+set notification-fg             "#f8f8f2" # Foreground
+
+set highlight-color             "#ffb86c" # Orange
+set highlight-active-color      "#ff79c6" # Pink
+
+#NEW
+set completion-bg               "#18181A" # Background
+set completion-fg               "#F6C177" # Comment
+set completion-group-bg         "#18181A" # Background
+set completion-group-fg         "#F6C177" # Comment
+set completion-highlight-bg     "#F6C177" # Selection
+set completion-highlight-fg     "#64403E" # Foreground
+
+set index-bg                    "#18181A" # Background
+set index-fg                    "#E0DEF4" # Foreground
+set index-active-bg             "#18181A" # Current Line
+set index-active-fg             "#E0DEF4" # Foreground
+
+set inputbar-bg                 "#18181A" # Background
+set inputbar-fg                 "#E0DEF4" # Foreground
+set statusbar-bg                "#18181A" # Background
+set statusbar-fg                "#E0DEF4" # Foreground
+
+set default-bg                  "#18181A" # Background
+set default-fg                  "#E0DEF4" # Foreground
+
+set render-loading              true
+set render-loading-fg           "#18181A" # Background
+set render-loading-bg           "#E0DEF4" # Foreground
+
+set recolor-lightcolor          "#18181A" # Background
+set recolor-darkcolor           "#E0DEF4" # Foreground
+
