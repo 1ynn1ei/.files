@@ -20,7 +20,7 @@ set completion-highlight-fg     "#64403E" # Foreground
 set index-bg                    "#18181A" # Background
 set index-fg                    "#E0DEF4" # Foreground
 set index-active-bg             "#18181A" # Current Line
-set index-active-fg             "#E0DEF4" # Foreground
+set index-active-fg             "#F6C177" # Foreground
 
 set inputbar-bg                 "#18181A" # Background
 set inputbar-fg                 "#E0DEF4" # Foreground

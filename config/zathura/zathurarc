@@ -11,6 +11,10 @@ map D toggle_made_mode
 set window-title-basename "true"
 set selection-clipboard "clipboard"
 
+#index mode
+map index k navigate_index up
+map index j navigate_index down
+
 #theme
 include themerc
 
