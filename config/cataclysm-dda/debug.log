@@ -81,3 +81,205 @@
 18:40:01.418 : Log shutdown.
 -----------------------------------------
 
+
+
+-----------------------------------------
+21:05:20.099 : Starting log.
+21:05:20.099 INFO : Cataclysm DDA version 0.H
+21:05:20.101 INFO : [main] C locale set to LC_CTYPE=de_DE.UTF-8;LC_NUMERIC=de_DE.UTF-8;LC_TIME=de_DE.UTF-8;LC_COLLATE=C;LC_MONETARY=de_DE.UTF-8;LC_MESSAGES=de_DE.UTF-8;LC_PAPER=de_DE.UTF-8;LC_NAME=de_DE.UTF-8;LC_ADDRESS=de_DE.UTF-8;LC_TELEPHONE=de_DE.UTF-8;LC_MEASUREMENT=de_DE.UTF-8;LC_IDENTIFICATION=de_DE.UTF-8
+21:05:20.101 INFO : [main] C++ locale set to LC_CTYPE=de_DE.UTF-8;LC_NUMERIC=de_DE.UTF-8;LC_TIME=de_DE.UTF-8;LC_COLLATE=C;LC_MONETARY=de_DE.UTF-8;LC_MESSAGES=de_DE.UTF-8;LC_PAPER=de_DE.UTF-8;LC_NAME=de_DE.UTF-8;LC_ADDRESS=de_DE.UTF-8;LC_TELEPHONE=de_DE.UTF-8;LC_MEASUREMENT=de_DE.UTF-8;LC_IDENTIFICATION=de_DE.UTF-8
+21:05:20.105 INFO : [options] C locale set to LC_CTYPE=de_DE.UTF-8;LC_NUMERIC=de_DE.UTF-8;LC_TIME=de_DE.UTF-8;LC_COLLATE=C;LC_MONETARY=de_DE.UTF-8;LC_MESSAGES=de_DE.UTF-8;LC_PAPER=de_DE.UTF-8;LC_NAME=de_DE.UTF-8;LC_ADDRESS=de_DE.UTF-8;LC_TELEPHONE=de_DE.UTF-8;LC_MEASUREMENT=de_DE.UTF-8;LC_IDENTIFICATION=de_DE.UTF-8
+21:05:20.105 INFO : [options] C++ locale set to LC_CTYPE=de_DE.UTF-8;LC_NUMERIC=de_DE.UTF-8;LC_TIME=de_DE.UTF-8;LC_COLLATE=C;LC_MONETARY=de_DE.UTF-8;LC_MESSAGES=de_DE.UTF-8;LC_PAPER=de_DE.UTF-8;LC_NAME=de_DE.UTF-8;LC_ADDRESS=de_DE.UTF-8;LC_TELEPHONE=de_DE.UTF-8;LC_MEASUREMENT=de_DE.UTF-8;LC_IDENTIFICATION=de_DE.UTF-8
+21:36:44.150 ERROR : (error message will follow backtrace)
+    cataclysm(debug_write_backtrace(std::ostream&)+0x3c) [0x5556a640ca5b]
+    cataclysm(DebugLog(DebugLevel, DebugClass)+0x159) [0x5556a640d03d]
+    cataclysm(realDebugmsg(char const*, char const*, char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)+0x166) [0x5556a640d2ba]
+    cataclysm(void realDebugmsg<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(char const*, char const*, char const*, char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)+0x6e) [0x5556a6a29520]
+    cataclysm(map::ter_set(tripoint const&, int_id<ter_t> const&, bool)+0x4bf) [0x5556a6a1334b]
+    cataclysm(map::bash_ter_furn(tripoint const&, bash_params&)+0xe67) [0x5556a6a18821]
+    cataclysm(map::bash(tripoint const&, int, bool, bool, bool, vehicle const*)+0x118) [0x5556a6a18d12]
+    cataclysm(+0x1517b8a) [0x5556a6542b8a]
+    cataclysm(explosion_handler::_make_explosion(Creature const*, tripoint const&, explosion_data const&)+0x19a) [0x5556a6548614]
+    cataclysm(explosion_handler::process_explosions()+0xb2) [0x5556a6548b82]
+    cataclysm(do_turn()+0x788) [0x5556a64becee]
+    cataclysm(main+0x5ed) [0x5556a69df832]
+    /usr/lib/libc.so.6(+0x27c4c) [0x7fd18c427c4c]
+    /usr/lib/libc.so.6(__libc_start_main+0x85) [0x7fd18c427d05]
+    cataclysm(_start+0x21) [0x5556a5f69961]
+
+    Attempting to repeat stack trace using debug symbols…
+    debug_write_backtrace(std::ostream&)
+    …/src/debug.cpp:1226
+    DebugLog(DebugLevel, DebugClass)
+    …/src/debug.cpp:1453
+    realDebugmsg(char const*, char const*, char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+    …/src/debug.cpp:514
+    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()
+    /usr/include/c++/13.2/bits/basic_string.h:792
+    void realDebugmsg<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(char const*, char const*, char const*, char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+    …/src/debug.h:78
+    map::ter_set(tripoint const&, int_id<ter_t> const&, bool)
+    …/src/map.cpp:2211 (discriminator 8)
+    map::bash_ter_furn(tripoint const&, bash_params&)
+    …/src/map.cpp:4147 (discriminator 2)
+    map::bash(tripoint const&, int, bool, bool, bool, vehicle const*)
+    …/src/map.cpp:4202
+    explosion_handler::do_blast(Creature const*, tripoint const&, float, float, bool)
+    …/src/explosion.cpp:240
+    explosion_handler::_make_explosion(Creature const*, tripoint const&, explosion_data const&)
+    …/src/explosion.cpp:515
+    explosion_handler::process_explosions()
+    …/src/explosion.cpp:906
+    do_turn()
+    …/src/do_turn.cpp:602
+    main
+    …/src/main.cpp:798 (discriminator 2)
+    ??
+    ??:0
+    ??
+    ??:0
+    _start
+    /builddir/glibc-2.38/csu/../sysdeps/x86_64/start.S:117
+Backtrace emission took 19 seconds.
+(continued from above) ERROR : src/map.cpp:2211 [bool map::ter_set(const tripoint&, const ter_id&, bool)] Setting terrain t_hole at (124,115,0) where furniture is f_rubble.  Terrain is_open_air
+If this is intentional, set the ALLOW_ON_OPEN_AIR flag on the furniture
+21:37:09.760 ERROR : src/map.cpp:2211 [bool map::ter_set(const tripoint&, const ter_id&, bool)] Setting terrain t_hole at (125,115,0) where furniture is f_rubble.  Terrain is_open_air
+If this is intentional, set the ALLOW_ON_OPEN_AIR flag on the furniture
+21:37:12.353 ERROR : src/map.cpp:2211 [bool map::ter_set(const tripoint&, const ter_id&, bool)] Setting terrain t_hole at (124,114,0) where furniture is f_rubble.  Terrain is_open_air
+If this is intentional, set the ALLOW_ON_OPEN_AIR flag on the furniture
+21:37:12.680 ERROR : src/map.cpp:2211 [bool map::ter_set(const tripoint&, const ter_id&, bool)] Setting terrain t_hole at (126,112,0) where furniture is f_rubble.  Terrain is_open_air
+If this is intentional, set the ALLOW_ON_OPEN_AIR flag on the furniture
+21:37:12.802 ERROR : src/map.cpp:2211 [bool map::ter_set(const tripoint&, const ter_id&, bool)] Setting terrain t_hole at (122,116,0) where furniture is f_rubble.  Terrain is_open_air
+If this is intentional, set the ALLOW_ON_OPEN_AIR flag on the furniture
+21:37:29.640 ERROR : src/map.cpp:2211 [bool map::ter_set(const tripoint&, const ter_id&, bool)] Setting terrain t_hole at (123,116,0) where furniture is f_rubble.  Terrain is_open_air
+If this is intentional, set the ALLOW_ON_OPEN_AIR flag on the furniture
+21:37:29.663 ERROR : src/map.cpp:2211 [bool map::ter_set(const tripoint&, const ter_id&, bool)] Setting terrain t_hole at (127,112,0) where furniture is f_rubble.  Terrain is_open_air
+If this is intentional, set the ALLOW_ON_OPEN_AIR flag on the furniture
+21:37:29.697 ERROR : src/map.cpp:2211 [bool map::ter_set(const tripoint&, const ter_id&, bool)] Setting terrain t_hole at (122,117,0) where furniture is f_rubble.  Terrain is_open_air
+If this is intentional, set the ALLOW_ON_OPEN_AIR flag on the furniture
+
+-----------------------------------------
+13:21:16.829 : Starting log.
+13:21:16.829 INFO : Cataclysm DDA version 0.H
+13:21:16.835 INFO : [main] C locale set to LC_CTYPE=de_DE.UTF-8;LC_NUMERIC=de_DE.UTF-8;LC_TIME=de_DE.UTF-8;LC_COLLATE=C;LC_MONETARY=de_DE.UTF-8;LC_MESSAGES=de_DE.UTF-8;LC_PAPER=de_DE.UTF-8;LC_NAME=de_DE.UTF-8;LC_ADDRESS=de_DE.UTF-8;LC_TELEPHONE=de_DE.UTF-8;LC_MEASUREMENT=de_DE.UTF-8;LC_IDENTIFICATION=de_DE.UTF-8
+13:21:16.835 INFO : [main] C++ locale set to LC_CTYPE=de_DE.UTF-8;LC_NUMERIC=de_DE.UTF-8;LC_TIME=de_DE.UTF-8;LC_COLLATE=C;LC_MONETARY=de_DE.UTF-8;LC_MESSAGES=de_DE.UTF-8;LC_PAPER=de_DE.UTF-8;LC_NAME=de_DE.UTF-8;LC_ADDRESS=de_DE.UTF-8;LC_TELEPHONE=de_DE.UTF-8;LC_MEASUREMENT=de_DE.UTF-8;LC_IDENTIFICATION=de_DE.UTF-8
+13:21:16.858 INFO : [options] C locale set to LC_CTYPE=de_DE.UTF-8;LC_NUMERIC=de_DE.UTF-8;LC_TIME=de_DE.UTF-8;LC_COLLATE=C;LC_MONETARY=de_DE.UTF-8;LC_MESSAGES=de_DE.UTF-8;LC_PAPER=de_DE.UTF-8;LC_NAME=de_DE.UTF-8;LC_ADDRESS=de_DE.UTF-8;LC_TELEPHONE=de_DE.UTF-8;LC_MEASUREMENT=de_DE.UTF-8;LC_IDENTIFICATION=de_DE.UTF-8
+13:21:16.858 INFO : [options] C++ locale set to LC_CTYPE=de_DE.UTF-8;LC_NUMERIC=de_DE.UTF-8;LC_TIME=de_DE.UTF-8;LC_COLLATE=C;LC_MONETARY=de_DE.UTF-8;LC_MESSAGES=de_DE.UTF-8;LC_PAPER=de_DE.UTF-8;LC_NAME=de_DE.UTF-8;LC_ADDRESS=de_DE.UTF-8;LC_TELEPHONE=de_DE.UTF-8;LC_MEASUREMENT=de_DE.UTF-8;LC_IDENTIFICATION=de_DE.UTF-8
+
+
+-----------------------------------------
+10:40:27.851 : Starting log.
+10:40:27.851 INFO : Cataclysm DDA version 0.H
+10:40:27.854 INFO : [main] C locale set to LC_CTYPE=de_DE.UTF-8;LC_NUMERIC=de_DE.UTF-8;LC_TIME=de_DE.UTF-8;LC_COLLATE=C;LC_MONETARY=de_DE.UTF-8;LC_MESSAGES=de_DE.UTF-8;LC_PAPER=de_DE.UTF-8;LC_NAME=de_DE.UTF-8;LC_ADDRESS=de_DE.UTF-8;LC_TELEPHONE=de_DE.UTF-8;LC_MEASUREMENT=de_DE.UTF-8;LC_IDENTIFICATION=de_DE.UTF-8
+10:40:27.854 INFO : [main] C++ locale set to LC_CTYPE=de_DE.UTF-8;LC_NUMERIC=de_DE.UTF-8;LC_TIME=de_DE.UTF-8;LC_COLLATE=C;LC_MONETARY=de_DE.UTF-8;LC_MESSAGES=de_DE.UTF-8;LC_PAPER=de_DE.UTF-8;LC_NAME=de_DE.UTF-8;LC_ADDRESS=de_DE.UTF-8;LC_TELEPHONE=de_DE.UTF-8;LC_MEASUREMENT=de_DE.UTF-8;LC_IDENTIFICATION=de_DE.UTF-8
+10:40:27.866 INFO : [options] C locale set to LC_CTYPE=de_DE.UTF-8;LC_NUMERIC=de_DE.UTF-8;LC_TIME=de_DE.UTF-8;LC_COLLATE=C;LC_MONETARY=de_DE.UTF-8;LC_MESSAGES=de_DE.UTF-8;LC_PAPER=de_DE.UTF-8;LC_NAME=de_DE.UTF-8;LC_ADDRESS=de_DE.UTF-8;LC_TELEPHONE=de_DE.UTF-8;LC_MEASUREMENT=de_DE.UTF-8;LC_IDENTIFICATION=de_DE.UTF-8
+10:40:27.866 INFO : [options] C++ locale set to LC_CTYPE=de_DE.UTF-8;LC_NUMERIC=de_DE.UTF-8;LC_TIME=de_DE.UTF-8;LC_COLLATE=C;LC_MONETARY=de_DE.UTF-8;LC_MESSAGES=de_DE.UTF-8;LC_PAPER=de_DE.UTF-8;LC_NAME=de_DE.UTF-8;LC_ADDRESS=de_DE.UTF-8;LC_TELEPHONE=de_DE.UTF-8;LC_MEASUREMENT=de_DE.UTF-8;LC_IDENTIFICATION=de_DE.UTF-8
+
+
+-----------------------------------------
+18:59:13.890 : Starting log.
+18:59:13.891 INFO : Cataclysm DDA version 0.H
+18:59:13.896 INFO : [main] C locale set to LC_CTYPE=de_DE.UTF-8;LC_NUMERIC=de_DE.UTF-8;LC_TIME=de_DE.UTF-8;LC_COLLATE=C;LC_MONETARY=de_DE.UTF-8;LC_MESSAGES=de_DE.UTF-8;LC_PAPER=de_DE.UTF-8;LC_NAME=de_DE.UTF-8;LC_ADDRESS=de_DE.UTF-8;LC_TELEPHONE=de_DE.UTF-8;LC_MEASUREMENT=de_DE.UTF-8;LC_IDENTIFICATION=de_DE.UTF-8
+18:59:13.896 INFO : [main] C++ locale set to LC_CTYPE=de_DE.UTF-8;LC_NUMERIC=de_DE.UTF-8;LC_TIME=de_DE.UTF-8;LC_COLLATE=C;LC_MONETARY=de_DE.UTF-8;LC_MESSAGES=de_DE.UTF-8;LC_PAPER=de_DE.UTF-8;LC_NAME=de_DE.UTF-8;LC_ADDRESS=de_DE.UTF-8;LC_TELEPHONE=de_DE.UTF-8;LC_MEASUREMENT=de_DE.UTF-8;LC_IDENTIFICATION=de_DE.UTF-8
+18:59:13.918 INFO : [options] C locale set to LC_CTYPE=de_DE.UTF-8;LC_NUMERIC=de_DE.UTF-8;LC_TIME=de_DE.UTF-8;LC_COLLATE=C;LC_MONETARY=de_DE.UTF-8;LC_MESSAGES=de_DE.UTF-8;LC_PAPER=de_DE.UTF-8;LC_NAME=de_DE.UTF-8;LC_ADDRESS=de_DE.UTF-8;LC_TELEPHONE=de_DE.UTF-8;LC_MEASUREMENT=de_DE.UTF-8;LC_IDENTIFICATION=de_DE.UTF-8
+18:59:13.918 INFO : [options] C++ locale set to LC_CTYPE=de_DE.UTF-8;LC_NUMERIC=de_DE.UTF-8;LC_TIME=de_DE.UTF-8;LC_COLLATE=C;LC_MONETARY=de_DE.UTF-8;LC_MESSAGES=de_DE.UTF-8;LC_PAPER=de_DE.UTF-8;LC_NAME=de_DE.UTF-8;LC_ADDRESS=de_DE.UTF-8;LC_TELEPHONE=de_DE.UTF-8;LC_MEASUREMENT=de_DE.UTF-8;LC_IDENTIFICATION=de_DE.UTF-8
+19:00:17.485 ERROR : (error message will follow backtrace)
+    cataclysm(debug_write_backtrace(std::ostream&)+0x3c) [0x55a82be47a5b]
+    cataclysm(DebugLog(DebugLevel, DebugClass)+0x159) [0x55a82be4803d]
+    cataclysm(realDebugmsg(char const*, char const*, char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)+0x166) [0x55a82be482ba]
+    cataclysm(void realDebugmsg<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(char const*, char const*, char const*, char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int&&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)+0x7d) [0x55a82c21e8ae]
+    cataclysm(item::put_in(item const&, pocket_type, bool, Character*)+0xe6) [0x55a82c1a53d0]
+    cataclysm(Item_modifier::modify(item&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const+0xd48) [0x55a82c2b449c]
+    cataclysm(Single_item_creator::create(std::vector<item, std::allocator<item> >&, time_point const&, std::vector<string_id<Item_spawn_data>, std::allocator<string_id<Item_spawn_data> > >&, spawn_flags) const+0x37d) [0x55a82c2b4f1d]
+    cataclysm(Item_group::create(std::vector<item, std::allocator<item> >&, time_point const&, std::vector<string_id<Item_spawn_data>, std::allocator<string_id<Item_spawn_data> > >&, spawn_flags) const+0x1b0) [0x55a82c2b324a]
+    cataclysm(Single_item_creator::create(std::vector<item, std::allocator<item> >&, time_point const&, std::vector<string_id<Item_spawn_data>, std::allocator<string_id<Item_spawn_data> > >&, spawn_flags) const+0x223) [0x55a82c2b4dc3]
+    cataclysm(Item_group::create(std::vector<item, std::allocator<item> >&, time_point const&, std::vector<string_id<Item_spawn_data>, std::allocator<string_id<Item_spawn_data> > >&, spawn_flags) const+0x1b0) [0x55a82c2b324a]
+    cataclysm(Item_group::create(std::vector<item, std::allocator<item> >&, time_point const&, std::vector<string_id<Item_spawn_data>, std::allocator<string_id<Item_spawn_data> > >&, spawn_flags) const+0x6c) [0x55a82c2b3106]
+    cataclysm(Item_group::create(std::vector<item, std::allocator<item> >&, time_point const&, std::vector<string_id<Item_spawn_data>, std::allocator<string_id<Item_spawn_data> > >&, spawn_flags) const+0x1b0) [0x55a82c2b324a]
+    cataclysm(Item_group::create(std::vector<item, std::allocator<item> >&, time_point const&, std::vector<string_id<Item_spawn_data>, std::allocator<string_id<Item_spawn_data> > >&, spawn_flags) const+0x6c) [0x55a82c2b3106]
+    cataclysm(Single_item_creator::create(std::vector<item, std::allocator<item> >&, time_point const&, std::vector<string_id<Item_spawn_data>, std::allocator<string_id<Item_spawn_data> > >&, spawn_flags) const+0x223) [0x55a82c2b4dc3]
+    cataclysm(Item_group::create(std::vector<item, std::allocator<item> >&, time_point const&, std::vector<string_id<Item_spawn_data>, std::allocator<string_id<Item_spawn_data> > >&, spawn_flags) const+0x1b0) [0x55a82c2b324a]
+    cataclysm(Single_item_creator::create(std::vector<item, std::allocator<item> >&, time_point const&, std::vector<string_id<Item_spawn_data>, std::allocator<string_id<Item_spawn_data> > >&, spawn_flags) const+0x223) [0x55a82c2b4dc3]
+    cataclysm(Item_spawn_data::create(std::vector<item, std::allocator<item> >&, time_point const&, spawn_flags) const+0x3b) [0x55a82c2afe57]
+    cataclysm(Item_spawn_data::check_consistency() const+0x8b) [0x55a82c2b0335]
+    cataclysm(Single_item_creator::check_consistency() const+0x4c) [0x55a82c2b09aa]
+    cataclysm(Item_group::check_consistency() const+0x20) [0x55a82c2b03a0]
+
+    Attempting to repeat stack trace using debug symbols…
+    debug_write_backtrace(std::ostream&)
+    …/src/debug.cpp:1226
+    DebugLog(DebugLevel, DebugClass)
+    …/src/debug.cpp:1453
+    realDebugmsg(char const*, char const*, char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+    …/src/debug.cpp:514
+    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()
+    /usr/include/c++/13.2/bits/basic_string.h:792
+    void realDebugmsg<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>(char const*, char const*, char const*, char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int&&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+    …/src/debug.h:78
+    item::put_in(item const&, pocket_type, bool, Character*)
+    …/src/item.cpp:1627 (discriminator 8)
+    Item_modifier::modify(item&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const
+    …/src/item_group.cpp:667
+    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()
+    /usr/include/c++/13.2/bits/basic_string.h:792
+    Single_item_creator::create(std::vector<item, std::allocator<item> >&, time_point const&, std::vector<string_id<Item_spawn_data>, std::allocator<string_id<Item_spawn_data> > >&, spawn_flags) const
+    …/src/item_group.cpp:270
+    Item_group::create(std::vector<item, std::allocator<item> >&, time_point const&, std::vector<string_id<Item_spawn_data>, std::allocator<string_id<Item_spawn_data> > >&, spawn_flags) const
+    …/src/item_group.cpp:824 (discriminator 1)
+    Single_item_creator::create(std::vector<item, std::allocator<item> >&, time_point const&, std::vector<string_id<Item_spawn_data>, std::allocator<string_id<Item_spawn_data> > >&, spawn_flags) const
+    …/src/item_group.cpp:265
+    Item_group::create(std::vector<item, std::allocator<item> >&, time_point const&, std::vector<string_id<Item_spawn_data>, std::allocator<string_id<Item_spawn_data> > >&, spawn_flags) const
+    …/src/item_group.cpp:824 (discriminator 1)
+    __gnu_cxx::__normal_iterator<std::unique_ptr<Item_spawn_data, std::default_delete<Item_spawn_data> > const*, std::vector<std::unique_ptr<Item_spawn_data, std::default_delete<Item_spawn_data> >, std::allocator<std::unique_ptr<Item_spawn_data, std::default_delete<Item_spawn_data> > > > >::operator++()
+    /usr/include/c++/13.2/bits/stl_iterator.h:1111
+    Item_group::create(std::vector<item, std::allocator<item> >&, time_point const&, std::vector<string_id<Item_spawn_data>, std::allocator<string_id<Item_spawn_data> > >&, spawn_flags) const
+    …/src/item_group.cpp:808
+    Item_group::create(std::vector<item, std::allocator<item> >&, time_point const&, std::vector<string_id<Item_spawn_data>, std::allocator<string_id<Item_spawn_data> > >&, spawn_flags) const
+    …/src/item_group.cpp:824 (discriminator 1)
+    __gnu_cxx::__normal_iterator<std::unique_ptr<Item_spawn_data, std::default_delete<Item_spawn_data> > const*, std::vector<std::unique_ptr<Item_spawn_data, std::default_delete<Item_spawn_data> >, std::allocator<std::unique_ptr<Item_spawn_data, std::default_delete<Item_spawn_data> > > > >::operator++()
+    /usr/include/c++/13.2/bits/stl_iterator.h:1111
+    Item_group::create(std::vector<item, std::allocator<item> >&, time_point const&, std::vector<string_id<Item_spawn_data>, std::allocator<string_id<Item_spawn_data> > >&, spawn_flags) const
+    …/src/item_group.cpp:808
+    Single_item_creator::create(std::vector<item, std::allocator<item> >&, time_point const&, std::vector<string_id<Item_spawn_data>, std::allocator<string_id<Item_spawn_data> > >&, spawn_flags) const
+    …/src/item_group.cpp:265
+    Item_group::create(std::vector<item, std::allocator<item> >&, time_point const&, std::vector<string_id<Item_spawn_data>, std::allocator<string_id<Item_spawn_data> > >&, spawn_flags) const
+    …/src/item_group.cpp:824 (discriminator 1)
+    Single_item_creator::create(std::vector<item, std::allocator<item> >&, time_point const&, std::vector<string_id<Item_spawn_data>, std::allocator<string_id<Item_spawn_data> > >&, spawn_flags) const
+    …/src/item_group.cpp:265
+    Item_spawn_data::create(std::vector<item, std::allocator<item> >&, time_point const&, spawn_flags) const
+    …/src/item_group.cpp:40
+    Item_spawn_data::check_consistency() const
+    …/src/item_group.cpp:60
+    Single_item_creator::check_consistency() const
+    …/src/item_group.cpp:376
+    __gnu_cxx::__normal_iterator<std::unique_ptr<Item_spawn_data, std::default_delete<Item_spawn_data> > const*, std::vector<std::unique_ptr<Item_spawn_data, std::default_delete<Item_spawn_data> >, std::allocator<std::unique_ptr<Item_spawn_data, std::default_delete<Item_spawn_data> > > > >::operator++()
+    /usr/include/c++/13.2/bits/stl_iterator.h:1111
+    Item_group::check_consistency() const
+    …/src/item_group.cpp:861
+Backtrace emission took 47 seconds.
+(continued from above) ERROR : src/item.cpp:1627 [ret_val<void> item::put_in(const item&, pocket_type, bool, Character*)] tried to put an item (holybook_confucian) count (1) in a container (rucksack) that cannot contain it: pockets unacceptable because item is too big or item is too long
+
+-----------------------------------------
+19:03:53.820 : Starting log.
+19:03:53.820 INFO : Cataclysm DDA version 0.H
+19:03:53.826 INFO : [main] C locale set to LC_CTYPE=de_DE.UTF-8;LC_NUMERIC=de_DE.UTF-8;LC_TIME=de_DE.UTF-8;LC_COLLATE=C;LC_MONETARY=de_DE.UTF-8;LC_MESSAGES=de_DE.UTF-8;LC_PAPER=de_DE.UTF-8;LC_NAME=de_DE.UTF-8;LC_ADDRESS=de_DE.UTF-8;LC_TELEPHONE=de_DE.UTF-8;LC_MEASUREMENT=de_DE.UTF-8;LC_IDENTIFICATION=de_DE.UTF-8
+19:03:53.826 INFO : [main] C++ locale set to LC_CTYPE=de_DE.UTF-8;LC_NUMERIC=de_DE.UTF-8;LC_TIME=de_DE.UTF-8;LC_COLLATE=C;LC_MONETARY=de_DE.UTF-8;LC_MESSAGES=de_DE.UTF-8;LC_PAPER=de_DE.UTF-8;LC_NAME=de_DE.UTF-8;LC_ADDRESS=de_DE.UTF-8;LC_TELEPHONE=de_DE.UTF-8;LC_MEASUREMENT=de_DE.UTF-8;LC_IDENTIFICATION=de_DE.UTF-8
+19:03:53.844 INFO : [options] C locale set to LC_CTYPE=de_DE.UTF-8;LC_NUMERIC=de_DE.UTF-8;LC_TIME=de_DE.UTF-8;LC_COLLATE=C;LC_MONETARY=de_DE.UTF-8;LC_MESSAGES=de_DE.UTF-8;LC_PAPER=de_DE.UTF-8;LC_NAME=de_DE.UTF-8;LC_ADDRESS=de_DE.UTF-8;LC_TELEPHONE=de_DE.UTF-8;LC_MEASUREMENT=de_DE.UTF-8;LC_IDENTIFICATION=de_DE.UTF-8
+19:03:53.844 INFO : [options] C++ locale set to LC_CTYPE=de_DE.UTF-8;LC_NUMERIC=de_DE.UTF-8;LC_TIME=de_DE.UTF-8;LC_COLLATE=C;LC_MONETARY=de_DE.UTF-8;LC_MESSAGES=de_DE.UTF-8;LC_PAPER=de_DE.UTF-8;LC_NAME=de_DE.UTF-8;LC_ADDRESS=de_DE.UTF-8;LC_TELEPHONE=de_DE.UTF-8;LC_MEASUREMENT=de_DE.UTF-8;LC_IDENTIFICATION=de_DE.UTF-8
+19:06:02.586 WARNING : recipe_subset deserialized invalid recipe_id 'null'
+19:18:42.037 : Log shutdown.
+-----------------------------------------
+
+
+
+-----------------------------------------
+17:29:29.129 : Starting log.
+17:29:29.129 INFO : Cataclysm DDA version 0.H
+17:29:29.132 INFO : [main] C locale set to LC_CTYPE=de_DE.UTF-8;LC_NUMERIC=de_DE.UTF-8;LC_TIME=de_DE.UTF-8;LC_COLLATE=C;LC_MONETARY=de_DE.UTF-8;LC_MESSAGES=de_DE.UTF-8;LC_PAPER=de_DE.UTF-8;LC_NAME=de_DE.UTF-8;LC_ADDRESS=de_DE.UTF-8;LC_TELEPHONE=de_DE.UTF-8;LC_MEASUREMENT=de_DE.UTF-8;LC_IDENTIFICATION=de_DE.UTF-8
+17:29:29.132 INFO : [main] C++ locale set to LC_CTYPE=de_DE.UTF-8;LC_NUMERIC=de_DE.UTF-8;LC_TIME=de_DE.UTF-8;LC_COLLATE=C;LC_MONETARY=de_DE.UTF-8;LC_MESSAGES=de_DE.UTF-8;LC_PAPER=de_DE.UTF-8;LC_NAME=de_DE.UTF-8;LC_ADDRESS=de_DE.UTF-8;LC_TELEPHONE=de_DE.UTF-8;LC_MEASUREMENT=de_DE.UTF-8;LC_IDENTIFICATION=de_DE.UTF-8
+17:29:29.144 INFO : [options] C locale set to LC_CTYPE=de_DE.UTF-8;LC_NUMERIC=de_DE.UTF-8;LC_TIME=de_DE.UTF-8;LC_COLLATE=C;LC_MONETARY=de_DE.UTF-8;LC_MESSAGES=de_DE.UTF-8;LC_PAPER=de_DE.UTF-8;LC_NAME=de_DE.UTF-8;LC_ADDRESS=de_DE.UTF-8;LC_TELEPHONE=de_DE.UTF-8;LC_MEASUREMENT=de_DE.UTF-8;LC_IDENTIFICATION=de_DE.UTF-8
+17:29:29.144 INFO : [options] C++ locale set to LC_CTYPE=de_DE.UTF-8;LC_NUMERIC=de_DE.UTF-8;LC_TIME=de_DE.UTF-8;LC_COLLATE=C;LC_MONETARY=de_DE.UTF-8;LC_MESSAGES=de_DE.UTF-8;LC_PAPER=de_DE.UTF-8;LC_NAME=de_DE.UTF-8;LC_ADDRESS=de_DE.UTF-8;LC_TELEPHONE=de_DE.UTF-8;LC_MEASUREMENT=de_DE.UTF-8;LC_IDENTIFICATION=de_DE.UTF-8
+17:30:09.956 WARNING : recipe_subset deserialized invalid recipe_id 'null'
+18:25:24.495 : Log shutdown.
+-----------------------------------------
+

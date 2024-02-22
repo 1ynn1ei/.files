@@ -12,6 +12,7 @@ set window-title-basename "true"
 set selection-clipboard "clipboard"
 
 #index mode
+map index ; navigate_index collapse
 map index k navigate_index up
 map index j navigate_index down
 

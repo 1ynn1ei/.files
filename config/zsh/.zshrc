@@ -1,3 +1,4 @@
+# Download Znap, if it's not there yet.
 [[ -f ~/git/zsh-snap/znap.zsh ]] ||
     git clone --depth 1 -- \
         https://github.com/marlonrichert/zsh-snap.git ~/git/zsh-snap
@@ -12,10 +13,12 @@ znap source zsh-users/zsh-syntax-highlighting
 
 export EDITOR=nvim
 export VISUAL=nvim
-export PATH=$PATH:$HOME/.scripts
+export PATH=$PATH:$HOME/.arch220/scripts
 export PATH=$PATH:$HOME/.cargo/bin
 export SHELL=/usr/bin/zsh
+export XDG_RUNTIME_DIR=/run/user/$(id -u)
 
+unsetopt BEEP       # fuck this
 setopt prompt_subst # make theme work
 setopt auto_cd      # very convenient
 

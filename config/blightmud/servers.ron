@@ -1,0 +1,8 @@
+{
+    "aardwolf": (
+        host: "aardwolf.org",
+        port: 23,
+        tls: false,
+        verify_cert: false,
+    ),
+}

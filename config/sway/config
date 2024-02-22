@@ -1,26 +1,44 @@
+### Variables
+#
+# Logo key. Use Mod1 for Alt.
 set $mod Mod4
+# Home row direction keys, like vim
 set $left h
 set $down j
 set $up k
 set $right l
+# Your preferred terminal emulator
 set $term alacritty 
 
 set $screenshot grim
+# Your preferred application launcher
+# Note: pass the final command to swaymsg so that the resulting window can be opened
+# on the original workspace that the command was run on.
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
-output * bg $HOME/.bg.jpg fill
-### Idle configuration
+output * bg $HOME/lain2.jpg fill
+
+exec swayidle -w \
+         timeout 300 'swaylock -f --image "/home/lynn/lain2.jpg"' \
+         timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+         before-sleep 'swaylock -f --image "/home/lynn/lain2.jog"' \
+
+exec light -U 70
+
+### Input configuration
 #
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#          before-sleep 'swaylock -f -c 000000'
+#   input "2:14:SynPS/2_Synaptics_TouchPad" {
+#       dwt enabled
+#       tap enabled
+#       natural_scroll enabled
+#       middle_emulation enabled
+#   }
 #
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
+# You can get the names of your inputs by running: swaymsg -t get_inputs
+# Read `man 5 sway-input` for more information about this section.
+
 ### Key bindings
 #
 # Basics:
@@ -147,7 +165,7 @@ default_border pixel 2
 bar {
     position top
 
-   status_command while /home/lynn/.scripts/statusbard; do sleep 1; done
+   status_command while /home/lynn/git/.dotfiles/scripts/statusbard; do sleep 1; done
 
     colors {
         statusline #E0DEF4 
@@ -162,5 +180,7 @@ client.focused              #122932 #64403E #4477ff #4477ff
 client.focused_inactive     #122932 #18181A #d8dee8 #2f343f  
 client.unfocused            #122932 #18181A #d8dee8 #2f343f 
 client.urgent               #122932 #18181A #d8dee8 #2f343f
+
+exec pipewire
 
 include /etc/sway/config.d/*
