@@ -3,6 +3,7 @@ vim.opt.cmdheight = 2
 vim.opt.fileencoding = "utf-8"
 vim.opt.completeopt={"menuone", "noinsert" ,"noselect"}
 vim.opt.shortmess:append "c"
+vim.opt.termguicolors = true
 					-- ensure consistent split behavior
 vim.opt.splitbelow = true
 vim.opt.splitright = true

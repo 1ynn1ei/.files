@@ -24,6 +24,7 @@ require('packer').init {
 }
 
 return require('packer').startup(function(use)
+    use 'norcalli/nvim-colorizer.lua'
     use 'wbthomason/packer.nvim'
     use 'tpope/vim-fugitive'
     use 'frabjous/knap'
