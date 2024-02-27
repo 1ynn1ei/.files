@@ -13,5 +13,6 @@ echo "Hallo, ${USER}. Konfiguration installieren."
 stowed "${HOME}" home 
 stowed "${HOME}/.config" config
 stowed "${HOME}/.scripts" scripts
+stowed "${HOME}/.config/fish/functions" fishes
 echo ""
 echo "Fertig."
