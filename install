@@ -1,0 +1,17 @@
+#!/bin/sh
+
+stowed() {
+  dest=$1
+  from=$2
+  mkdir -p ${dest}
+  stow -v -R -t ${dest} ${from}
+}
+
+echo ""
+echo "Hallo, ${USER}. Konfiguration installieren."
+
+stowed "${HOME}" home 
+stowed "${HOME}/.config" config
+stowed "${HOME}/.scripts" scripts
+echo ""
+echo "Fertig."

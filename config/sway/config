@@ -165,7 +165,7 @@ default_border pixel 2
 bar {
     position top
 
-   status_command while /home/lynn/git/.dotfiles/scripts/statusbard; do sleep 1; done
+   status_command while "${HOME}/.scripts/statusbard"; do sleep 1; done
 
     colors {
         statusline #E0DEF4 
