@@ -16,14 +16,12 @@ set $screenshot grim
 # on the original workspace that the command was run on.
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
-output * bg $HOME/lain2.jpg fill
+output * bg $HOME/.bg.jpg fill
 
 exec swayidle -w \
          timeout 300 'swaylock -f --image "/home/lynn/lain2.jpg"' \
          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
          before-sleep 'swaylock -f --image "/home/lynn/lain2.jog"' \
-
-exec light -U 70
 
 ### Input configuration
 #
