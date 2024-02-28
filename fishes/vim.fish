@@ -1,3 +1,3 @@
 function vim -d "alias for neovim"
-  nvim
+  nvim $argv
 end
