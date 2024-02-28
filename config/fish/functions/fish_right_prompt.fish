@@ -6,10 +6,11 @@ function fish_right_prompt
   set CleanBgColor (set_color -b 122932)
 
   set Prompt
+  set IsGit (git rev-parse --is-inside-work-tree 2> /dev/null)
   # git
-  if test -e ".git"
+  if test "$IsGit"
     set dirty (git status --porcelain)
-    set branch (git rev-parse --abbrev-ref HEAD)
+    set branch (git branch --show-current)
     set branch_start "["
     set branch_end "]"
     if test -z "$dirty"
@@ -27,3 +28,4 @@ function fish_right_prompt
   set Prompt "$Prompt$DefaultColor$time_start$time$time_end$ResetColor"
   echo -es "$Prompt"
 end
+
