@@ -4,17 +4,8 @@ SETUVAR VIRTUAL_ENV_DISABLE_PROMPT:true
 SETUVAR --export XDG_RUNTIME_DIR:/run/user/1000
 SETUVAR __fish_initialized:3400
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
-SETUVAR _fisher_jorgebucaran_2F_hydro_files:\x7e/\x2econfig/fish/functions/fish_mode_prompt\x2efish\x1e\x7e/\x2econfig/fish/functions/fish_prompt\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/hydro\x2efish
-SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ejorgebucaran/hydro
+SETUVAR _fisher_plugins:jorgebucaran/fisher
 SETUVAR _fisher_upgraded_to_4_4:\x1d
-SETUVAR _hydro_git_10941:main\u2022\x20\u21911\x20
-SETUVAR _hydro_git_1146:main\u2022\x20
-SETUVAR _hydro_git_1163:enum\x2ddom\x2dobjs\x20
-SETUVAR _hydro_git_14811:\x1d
-SETUVAR _hydro_git_16176:main\u2022\x20
-SETUVAR _hydro_git_18486:\x1d
-SETUVAR _hydro_git_3246:enum\x2ddom\x2dobjs\x20
-SETUVAR _hydro_git_8018:main\u2022\x20\u21911\x20
 SETUVAR fish_color_autosuggestion:969896
 SETUVAR fish_color_cancel:\x2d\x2dreverse
 SETUVAR fish_color_command:c397d8
@@ -56,4 +47,3 @@ SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
 SETUVAR fish_user_paths:/home/lynn/\x2escripts\x1e/home/lynn/\x2ecargo/bin
-SETUVAR hydro_symbol_prompt:lynn\x3e
