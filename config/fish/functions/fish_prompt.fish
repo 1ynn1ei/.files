@@ -1,3 +1,14 @@
-function fish_prompt --description Hydro
-    echo -e "$_hydro_color_pwd$_hydro_pwd$hydro_color_normal $_hydro_color_git$$_hydro_git$hydro_color_normal$_hydro_color_duration$_hydro_cmd_duration$hydro_color_normal$_hydro_status$hydro_color_normal "
+function fish_prompt
+  # theme
+  set ResetColor (set_color normal)
+  set DefaultColor (set_color d8dee8)
+  set UserColor (set_color 5c5c5c)
+
+  # components
+  set p (prompt_pwd)
+
+  # pulling together
+  set FPromptBegin "$UserColor$USER$DefaultColor|$p$ResetColor"
+  echo -es $FPromptBegin ">"
 end
+
