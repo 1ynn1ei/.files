@@ -26,6 +26,6 @@ function fish_right_prompt
   set time_end ")"
 
   set Prompt "$Prompt$DefaultColor$time_start$time$time_end$ResetColor"
-  echo -es "$Prompt"
+  echo -es "$ResetColor$Prompt"
 end
 
