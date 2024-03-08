@@ -33,22 +33,16 @@ return require('packer').startup(function(use)
         'nvim-telescope/telescope.nvim',
         tag = '0.1.4',
         requires = { {'nvim-lua/plenary.nvim'} },
-        config = function()
-            require('telescope').setup {
-                defaults =  {
-                    vimgrep_arguments = {
-                        'rg',
-                        '--hidden',
-                    }
-                }
-            }
-        end
     }
     use ({
         'nvim-treesitter/nvim-treesitter',
         run = ":TSUpdate"
     })
-    use ('theprimeagen/harpoon')
+    use {
+      'theprimeagen/harpoon',
+      branch = 'harpoon2',
+      requires = { {'nvim-lua/plenary.nvim'} },
+    }
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',

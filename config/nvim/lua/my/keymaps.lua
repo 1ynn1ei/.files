@@ -27,12 +27,6 @@ keymap("v", "<A-j>", ":m .+1<CR>==", options)
 keymap("v", "<A-k>", ":m .-2<CR>==", options)
 keymap("x", "J", ":move '>+1<CR>gv-gv", options)
 keymap("x", "K", ":move '<-2<CR>gv-gv", options)
-keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", options)
-keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", options)
-
--- telescope
-keymap("n", "<leader>f", "<cmd>Telescope find_files hidden=true theme=dropdown<cr>", options)
---keymap("n", "<leader>p", "<cmd>Telescope live_grep theme=dropdown<cr>", options)
 
 -- tree view
 keymap("n", "<leader>tt", "<cmd>Neotree<cr>", options)

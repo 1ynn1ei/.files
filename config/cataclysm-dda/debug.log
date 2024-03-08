@@ -283,3 +283,16 @@ Backtrace emission took 47 seconds.
 18:25:24.495 : Log shutdown.
 -----------------------------------------
 
+
+
+-----------------------------------------
+12:11:15.818 : Starting log.
+12:11:15.819 INFO : Cataclysm DDA version 0.G-6202-g5d069f2eac
+12:11:15.821 INFO : [main] C locale set to LC_CTYPE=de_DE.UTF-8;LC_NUMERIC=de_DE.UTF-8;LC_TIME=de_DE.UTF-8;LC_COLLATE=C;LC_MONETARY=de_DE.UTF-8;LC_MESSAGES=de_DE.UTF-8;LC_PAPER=de_DE.UTF-8;LC_NAME=de_DE.UTF-8;LC_ADDRESS=de_DE.UTF-8;LC_TELEPHONE=de_DE.UTF-8;LC_MEASUREMENT=de_DE.UTF-8;LC_IDENTIFICATION=de_DE.UTF-8
+12:11:15.821 INFO : [main] C++ locale set to LC_CTYPE=de_DE.UTF-8;LC_NUMERIC=de_DE.UTF-8;LC_TIME=de_DE.UTF-8;LC_COLLATE=C;LC_MONETARY=de_DE.UTF-8;LC_MESSAGES=de_DE.UTF-8;LC_PAPER=de_DE.UTF-8;LC_NAME=de_DE.UTF-8;LC_ADDRESS=de_DE.UTF-8;LC_TELEPHONE=de_DE.UTF-8;LC_MEASUREMENT=de_DE.UTF-8;LC_IDENTIFICATION=de_DE.UTF-8
+12:11:15.825 INFO : [options] C locale set to LC_CTYPE=de_DE.UTF-8;LC_NUMERIC=de_DE.UTF-8;LC_TIME=de_DE.UTF-8;LC_COLLATE=C;LC_MONETARY=de_DE.UTF-8;LC_MESSAGES=de_DE.UTF-8;LC_PAPER=de_DE.UTF-8;LC_NAME=de_DE.UTF-8;LC_ADDRESS=de_DE.UTF-8;LC_TELEPHONE=de_DE.UTF-8;LC_MEASUREMENT=de_DE.UTF-8;LC_IDENTIFICATION=de_DE.UTF-8
+12:11:15.825 INFO : [options] C++ locale set to LC_CTYPE=de_DE.UTF-8;LC_NUMERIC=de_DE.UTF-8;LC_TIME=de_DE.UTF-8;LC_COLLATE=C;LC_MONETARY=de_DE.UTF-8;LC_MESSAGES=de_DE.UTF-8;LC_PAPER=de_DE.UTF-8;LC_NAME=de_DE.UTF-8;LC_ADDRESS=de_DE.UTF-8;LC_TELEPHONE=de_DE.UTF-8;LC_MEASUREMENT=de_DE.UTF-8;LC_IDENTIFICATION=de_DE.UTF-8
+12:11:15.826 WARNING : opendir [/share/cataclysm-dda/cache] failed with "Datei oder Verzeichnis nicht gefunden".
+12:11:17.978 : Log shutdown.
+-----------------------------------------
+
