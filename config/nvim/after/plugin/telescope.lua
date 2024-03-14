@@ -2,7 +2,11 @@ require('telescope').setup {
     defaults =  {
         vimgrep_arguments = {
             'rg',
-            '--hidden',
+            '--no-heading',
+            '--with-filename',
+            '--line-number',
+            '--column',
+            '--smart-case',
         }
     },
     pickers = {
@@ -13,6 +17,9 @@ require('telescope').setup {
         theme = 'ivy'
       },
       buffers = {
+        theme = 'ivy'
+      },
+      grep_string = {
         theme = 'ivy'
       }
     }

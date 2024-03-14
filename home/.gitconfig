@@ -7,6 +7,8 @@
   aa = add -A
   s = status -sb
   c = commit
+  co = checkout
+  cob = checkout -b
   cm = commit -m
   last = log -1 HEAD --stat
   ln = "!f() { git log -n $1 --author $2; }; f"
