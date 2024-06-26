@@ -2,7 +2,7 @@
 	email = brooke.leichtle@gmail.com
 	name = Lynn Leichtle
 [core]
-	editor = nvim
+	editor = emacsclient -c 
 [alias]
   aa = add -A
   s = status -sb
