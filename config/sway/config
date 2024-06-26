@@ -199,4 +199,5 @@ exec mako
 exec emacs --fg-daemon
 exec light -U 90
 
+include $HOME/.config/sway/config.d/*
 include /etc/sway/config.d/*
