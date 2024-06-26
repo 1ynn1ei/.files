@@ -167,12 +167,31 @@ bar {
   swaybar_command waybar
 }
 
-# Property Name             Border  BG      Text    Indicator
-client.focused              #122932 #64403E #4477ff #4477ff   
-client.focused_inactive     #122932 #18181A #d8dee8 #2f343f  
-client.unfocused            #122932 #18181A #d8dee8 #2f343f 
-client.urgent               #122932 #18181A #d8dee8 #2f343f
+# Start flavours
+## Base16 Brush Trees Dark
+# Author: Abraham White &lt;abelincoln.white@gmail.com&gt;
 
+set $base00 #485867
+set $base01 #5a6d7a
+set $base02 #6d828e
+set $base03 #8299a1
+set $base04 #98afb5
+set $base05 #b0c5c8
+set $base06 #c9dbdc
+set $base07 #e3efef
+set $base08 #b38686
+set $base09 #d8bba2
+set $base0A #aab386
+set $base0B #87b386
+set $base0C #86b3b3
+set $base0D #868cb3
+set $base0E #b386b2
+set $base0F #b39f9f
+# End flavours
+client.focused           $base02 $base00 $base05 $base00 $base00
+client.unfocused         $base02 $base00 $base04 $base00 $base00
+client.focused_inactive  $base02 $base00 $base04 $base00 $base00
+client.urgent            $base02 $base00 $base04 $base00 $base00
 exec pipewire
 exec emacs --fg-daemon
 exec light -U 90
