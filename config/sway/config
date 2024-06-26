@@ -168,25 +168,25 @@ bar {
 }
 
 # Start flavours
-## Base16 Generated
-# Author: Flavours
+## Base16 Dracula
+# Author: Mike Barkmin (http://github.com/mikebarkmin) based on Dracula Theme (http://github.com/dracula)
 
-set $base00 #331f43
-set $base01 #574664
-set $base02 #7c6e84
-set $base03 #a195a5
-set $base04 #c6bcc6
-set $base05 #eae3e6
-set $base06 #ede7ea
-set $base07 #f0ebee
-set $base08 #8c69af
-set $base09 #986c78
-set $base0A #a26492
-set $base0B #a76482
-set $base0C #787878
-set $base0D #cd4b61
-set $base0E #ae6079
-set $base0F #d93e56
+set $base00 #282936
+set $base01 #3a3c4e
+set $base02 #4d4f68
+set $base03 #626483
+set $base04 #62d6e8
+set $base05 #e9e9f4
+set $base06 #f1f2f8
+set $base07 #f7f7fb
+set $base08 #ea51b2
+set $base09 #b45bcf
+set $base0A #00f769
+set $base0B #ebff87
+set $base0C #a1efe4
+set $base0D #62d6e8
+set $base0E #b45bcf
+set $base0F #00f769
 # End flavours
 #                       Border  BG      Text    Ind     Child Border
 client.focused          $base05 $base0D $base00 $base0D $base0D

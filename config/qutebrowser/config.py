@@ -14,27 +14,27 @@ c.tabs.padding = {
 c.colors.webpage.preferred_color_scheme = "dark"
 # Start flavours
 # base16-qutebrowser (https://github.com/theova/base16-qutebrowser)
-# Scheme name: Generated
-# Scheme author: Flavours
+# Scheme name: Dracula
+# Scheme author: Mike Barkmin (http://github.com/mikebarkmin) based on Dracula Theme (http://github.com/dracula)
 # Template author: theova and Daniel Mulford
 # Commentary: Tinted Theming: (https://github.com/tinted-theming)
 
-base00 = "#331f43"
-base01 = "#574664"
-base02 = "#7c6e84"
-base03 = "#a195a5"
-base04 = "#c6bcc6"
-base05 = "#eae3e6"
-base06 = "#ede7ea"
-base07 = "#f0ebee"
-base08 = "#8c69af"
-base09 = "#986c78"
-base0A = "#a26492"
-base0B = "#a76482"
-base0C = "#787878"
-base0D = "#cd4b61"
-base0E = "#ae6079"
-base0F = "#d93e56"
+base00 = "#282936"
+base01 = "#3a3c4e"
+base02 = "#4d4f68"
+base03 = "#626483"
+base04 = "#62d6e8"
+base05 = "#e9e9f4"
+base06 = "#f1f2f8"
+base07 = "#f7f7fb"
+base08 = "#ea51b2"
+base09 = "#b45bcf"
+base0A = "#00f769"
+base0B = "#ebff87"
+base0C = "#a1efe4"
+base0D = "#62d6e8"
+base0E = "#b45bcf"
+base0F = "#00f769"
 
 # set qutebrowser colors
 
