@@ -1,0 +1,28 @@
+[[item]]
+file = "~/.config/sway/config"
+template = "sway"
+subtemplate = "colors"
+light = false
+#hook = "while true; do pgrep -x inkscape && while true; do pgrep -x inkscape || break; done && break; done && swaymsg reload"
+hook = "swaymsg reload"
+[[item]]
+file = "~/.config/foot/foot.ini"
+template = "foot"
+[[item]]
+file = "~/.config/waybar/colors.css"
+template = "waybar"
+hook = "pkill -SIGRTMIN+7 waybar"
+rewrite = true
+[[item]]
+file = "~/.config/alacritty/alacritty.toml"
+template = "alacritty"
+subtemplate = "default-256"
+[[item]]
+file = "~/.config/qutebrowser/config.py"
+template = "qutebrowser"
+subtemplate = "minimal"
+hook = "reloadqb"
+[[item]]
+file= "~/.config/mako/config"
+template = "mako"
+hook = "killall mako"
