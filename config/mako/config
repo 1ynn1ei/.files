@@ -1,0 +1,29 @@
+font="Fira Sans 11"
+max-icon-size=32
+padding=10,20
+anchor=top-center
+default-timeout=8000
+width=400
+height=150
+border-size=3
+
+# Start flavours
+## Base16 Generated
+# Author: Flavours
+#
+# You can use these variables anywhere in the mako configuration file.
+
+background-color=#331f43
+text-color=#eae3e6
+border-color=#cd4b61
+
+[urgency=low]
+background-color=#331f43
+text-color=#a26492
+border-color=#cd4b61
+
+[urgency=high]
+background-color=#331f43
+text-color=#8c69af
+border-color=#cd4b61
+# End flavours
