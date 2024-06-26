@@ -7,23 +7,5 @@ width=400
 height=150
 border-size=3
 
-# Start flavours
-## Base16 Dracula
-# Author: Mike Barkmin (http://github.com/mikebarkmin) based on Dracula Theme (http://github.com/dracula)
-#
-# You can use these variables anywhere in the mako configuration file.
+include $HOME/.config/mako/config.d/*
 
-background-color=#282936
-text-color=#e9e9f4
-border-color=#62d6e8
-
-[urgency=low]
-background-color=#282936
-text-color=#00f769
-border-color=#62d6e8
-
-[urgency=high]
-background-color=#282936
-text-color=#ea51b2
-border-color=#62d6e8
-# End flavours

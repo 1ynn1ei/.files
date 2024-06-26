@@ -3,3 +3,18 @@ name = "base16-sway"
 path = "https://github.com/rkubosz/base16-sway"
 themes-dir = "themes"
 hook = "cp -f %f ~/.config/sway/config.d/theme && swaymsg reload"
+[[items]]
+name = "base16-waybar"
+path = "https://github.com/tinted-theming/base16-waybar"
+themes-dir = "colors"
+hook = "cp -f %f ~/.config/waybar/colors.css"
+[[items]]
+name = "base16-mako"
+path = "https://github.com/Eluminae/base16-mako"
+themes-dir = "colors"
+hook = "cp -f %f ~/.config/mako/config.d/theme && killall mako"
+[[items]]
+name = "base16-alacritty"
+path = "https://github.com/aarowill/base16-alacritty"
+themes-dir = "colors"
+hook = "cp -f %f ~/.config/alacritty/colors.toml"
