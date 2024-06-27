@@ -1,37 +1,37 @@
-# Base16 Zenburn - alacritty color config
-# elnawe
+# Base16 Dracula - alacritty color config
+# Mike Barkmin (http://github.com/mikebarkmin) based on Dracula Theme (http://github.com/dracula)
 
 [colors]
 draw_bold_text_with_bright_colors = false
 
 # Default colors
 [colors.primary]
-background = '0x383838'
-foreground = '0xdcdccc'
+background = '0x282936'
+foreground = '0xe9e9f4'
 
 # Colors the cursor will use if `custom_cursor_colors` is true
 [colors.cursor]
-text = '0x383838'
-cursor = '0xdcdccc'
+text = '0x282936'
+cursor = '0xe9e9f4'
 
 # Normal colors
 [colors.normal]
-black = '0x383838'
-red = '0xdca3a3'
-green = '0x5f7f5f'
-yellow = '0xe0cf9f'
-blue = '0x7cb8bb'
-magenta = '0xdc8cc3'
-cyan = '0x93e0e3'
-white = '0xdcdccc'
+black = '0x282936'
+red = '0xea51b2'
+green = '0xebff87'
+yellow = '0x00f769'
+blue = '0x62d6e8'
+magenta = '0xb45bcf'
+cyan = '0xa1efe4'
+white = '0xe9e9f4'
 
 # Bright colors
 [colors.bright]
-black = '0x6f6f6f'
-red = '0xdfaf8f'
-green = '0x404040'
-yellow = '0x606060'
-blue = '0x808080'
-magenta = '0xc0c0c0'
-cyan = '0x000000'
-white = '0xffffff'
+black = '0x626483'
+red = '0xb45bcf'
+green = '0x3a3c4e'
+yellow = '0x4d4f68'
+blue = '0x62d6e8'
+magenta = '0xf1f2f8'
+cyan = '0x00f769'
+white = '0xf7f7fb'

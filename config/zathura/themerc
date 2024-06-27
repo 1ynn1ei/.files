@@ -1,35 +1,35 @@
-# Base16 Zenburn
-# Author: elnawe
+# Base16 Dracula
+# Author: Mike Barkmin (http://github.com/mikebarkmin) based on Dracula Theme (http://github.com/dracula)
 
-set default-bg                  "#383838"
-set default-fg                  "#404040"
+set default-bg                  "#282936"
+set default-fg                  "#3a3c4e"
 
-set statusbar-fg                "#808080"
-set statusbar-bg                "#606060"
+set statusbar-fg                "#62d6e8"
+set statusbar-bg                "#4d4f68"
 
-set inputbar-bg                 "#383838"
-set inputbar-fg                 "#ffffff"
+set inputbar-bg                 "#282936"
+set inputbar-fg                 "#f7f7fb"
 
-set notification-bg             "#383838"
-set notification-fg             "#ffffff"
+set notification-bg             "#282936"
+set notification-fg             "#f7f7fb"
 
-set notification-error-bg       "#383838"
-set notification-error-fg       "#dca3a3"
+set notification-error-bg       "#282936"
+set notification-error-fg       "#ea51b2"
 
-set notification-warning-bg     "#383838"
-set notification-warning-fg     "#dca3a3"
+set notification-warning-bg     "#282936"
+set notification-warning-fg     "#ea51b2"
 
-set highlight-color             "#e0cf9f"
-set highlight-active-color      "#7cb8bb"
+set highlight-color             "#00f769"
+set highlight-active-color      "#62d6e8"
 
-set completion-bg               "#404040"
-set completion-fg               "#7cb8bb"
+set completion-bg               "#3a3c4e"
+set completion-fg               "#62d6e8"
 
-set completion-highlight-fg     "#ffffff"
-set completion-highlight-bg     "#7cb8bb"
+set completion-highlight-fg     "#f7f7fb"
+set completion-highlight-bg     "#62d6e8"
 
-set recolor-lightcolor          "#383838"
-set recolor-darkcolor           "#c0c0c0"
+set recolor-lightcolor          "#282936"
+set recolor-darkcolor           "#f1f2f8"
 
 set recolor                     "false"
 set recolor-keephue             "false"

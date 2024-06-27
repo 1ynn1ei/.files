@@ -31,4 +31,6 @@ file-override = "$(tinty current)-theme"
 hook = "cp -f %f ~/.emacs.d/custom-theme.el && emacsclient -e '(load-theme 'custom t)'"
 [[items]]
 name = "base16-rofi"
-path = "https://gitlab.com/0xdec/base16-rofi"
+path = "https://gitlab.com/jordiorlando/base16-rofi"
+themes-dir="colors"
+hook = "cp -f %f ~/.config/rofi/colors.rasi"
