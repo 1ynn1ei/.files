@@ -18,3 +18,17 @@ name = "base16-alacritty"
 path = "https://github.com/aarowill/base16-alacritty"
 themes-dir = "colors"
 hook = "cp -f %f ~/.config/alacritty/colors.toml"
+[[items]]
+name = "base16-zathura"
+path = "https://github.com/nicodebo/base16-zathura"
+themes-dir = "build_schemes/colors"
+hook = "cp -f %f ~/.config/zathura/themerc"
+[[items]]
+name = "base16-emacs"
+path = "https://github.com/belak/base16-emacs"
+themes-dir="build"
+file-override = "$(tinty current)-theme"
+hook = "cp -f %f ~/.emacs.d/custom-theme.el && emacsclient -e '(load-theme 'custom t)'"
+[[items]]
+name = "base16-rofi"
+path = "https://gitlab.com/0xdec/base16-rofi"
