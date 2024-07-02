@@ -1,0 +1,52 @@
+{
+    "layer": "bottom",
+    "position": "top",
+    "height": 24,
+    "spacing": 0,
+    "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
+    "modules-center": ["custom/spotify"],
+    "modules-right": ["pulseaudio", "network", "battery", "clock"],
+    "sway/window": {
+	"format": "{app_id}",
+	"max-length": 40
+    },
+    "battery": {
+	"bat": "BAT0",
+	"states": {
+	    "good": 95,
+	    "warning": 30,
+	    "critical": 5
+	},
+	"format": "{capacity}% {icon}",
+	"format-charging": "{capacity}% (charging)",
+	"format-plugged": "{capacity}% (plugged)",
+	"format-icons": [" ", " ", " ", " ", " "]
+    },
+    "network": {
+        "format-wifi": "{essid} ({signalStrength}%)  ",
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr}  ",
+        "format-disconnected": "Disconnected ⚠"
+    },
+    "pulseaudio": {
+        //"scroll-step": 1,
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": " ",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [" ", " "]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/spotify": {
+        "format": "♫ {}",
+        "max-length": 60,
+        "interval": 30, // Remove this if your script is endless and write in loop
+	"exec": "$HOME/.config/waybar/media.sh 2> /dev/null",
+    }
+}

@@ -1,19 +1,19 @@
 /**
- * Base16 Nord ROFI Color theme
+ * Base16 Rosé Pine ROFI Color theme
  *
  * Authors
- *  Scheme: arcticicestudio
+ *  Scheme: Emilia Dunfelt &lt;sayhi@dunfelt.se&gt;
  *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
  */
 
 * {
-    red:                         rgba ( 191, 97, 106, 100 % );
-    blue:                        rgba ( 129, 161, 193, 100 % );
-    lightfg:                     rgba ( 236, 239, 244, 100 % );
-    lightbg:                     rgba ( 59, 66, 82, 100 % );
-    foreground:                  rgba ( 229, 233, 240, 100 % );
-    background:                  rgba ( 46, 52, 64, 100 % );
-    background-color:            rgba ( 46, 52, 64, 0 % );
+    red:                         rgba ( 226, 225, 231, 100 % );
+    blue:                        rgba ( 156, 207, 216, 100 % );
+    lightfg:                     rgba ( 240, 240, 243, 100 % );
+    lightbg:                     rgba ( 31, 29, 46, 100 % );
+    foreground:                  rgba ( 224, 222, 244, 100 % );
+    background:                  rgba ( 25, 23, 36, 100 % );
+    background-color:            rgba ( 25, 23, 36, 0 % );
     separatorcolor:              @foreground;
     border-color:                @foreground;
     selected-normal-foreground:  @lightbg;

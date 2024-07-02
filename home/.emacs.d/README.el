@@ -1,20 +1,22 @@
 (let ((minver "29"))
-(when (version< emacs-version minver)
+  (when (version< emacs-version minver)
   (error "Your Emacs is too old -- this config requires v%s or higher" minver)))
 
 (use-package no-littering)
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
+(setq create-lockfiles nil)
 
 (setq debug-on-error t)
 
 (require 'package)
 (setq package-archives '(("melpa" . "https://melpa.org/packages/")
-			 ("org" . "https://orgmode.org/elpa/")
-			 ("elpa" . "http://elpa.gnu.org/packages/")))  
+                         ("melpa-stable" . "https://stable.melpa.org/packages/")
+                         ("org" . "https://orgmode.org/elpa/")
+                         ("elpa" . "http://elpa.gnu.org/packages/")))  
 (setq use-package-always-ensure t)
-
-(when (not (package-installed-p 'use-package))
-  (package-refresh-contents)
-  (package-install 'use-package))
 
 (use-package frames-only-mode)
 
@@ -33,8 +35,11 @@
 (set-face-attribute 'default nil :font "Fira Code")
 (use-package base16-theme)
 (use-package all-the-icons
-:if (display-graphic-p))
+  :if (display-graphic-p))
 (setq x-underline-at-descent-line t)
+
+(set-frame-parameter (selected-frame) 'alpha-background 85)
+(add-to-list 'default-frame-alist '(alpha-background . 85))
 
 (use-package doom-modeline
 :ensure t
@@ -45,20 +50,40 @@
   (org-indent-mode)
   (variable-pitch-mode 1)
   (auto-fill-mode 0)
-  (visual-line-mode 1)
-  (face-remap-add-relative 'default :family "ETBembo"))
+  (visual-line-mode 1))
+
 (use-package org
   :hook (org-mode . ll/org-mode-setup)
   :config
   (setq org-ellipsis " [x]"))
+
 (use-package org-bullets
   :config
   (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
-(use-package org-novelist
-  :ensure nil
-  :load-path "~/git/org-novelist")
 
+(setq org-adapt-indentation t
+      org-hide-leading-stars t
+      org-hide-emphasis-markers t
+      org-pretty-entities t)
+
+(setq org-src-fontify-natively t
+      org-src-tab-acts-natively t
+      org-edit-src-content-indentation 0)
+
+(custom-theme-set-faces
+ 'user
+ '(variable-pitch ((t (:family "ETBembo" :height 90 :weight thin))))
+ '(fixed-pitch ((t ( :family "Fira Code" :height 80)))))
+
+(use-package markdown-mode
+  :ensure t
+  :mode ("README\\.md\\'" . gfm-mode)
+  :init (setq markdown-command "multimarkdown")
+  :bind (:map markdown-mode-map
+              ("C-c C-e" . markdown-do)))
+(use-package quelpa-use-package)
 (use-package rustic
+  :quelpa (rustic :fetcher github :repo "emacs-rustic/rustic")
   :bind (:map rustic-mode-map
               ("M-j" . lsp-ui-imenu)
               ("M-?" . lsp-find-references)
@@ -67,13 +92,13 @@
               ("C-c C-c r" . lsp-rename)
               ("C-c C-c q" . lsp-workspace-restart)
               ("C-c C-c Q" . lsp-workspace-shutdown)
-              ("C-c C-c s" . lsp-rust-analyzer-status))
-  :config
-  ;; uncomment for less flashiness
-     (setq lsp-eldoc-hook nil)
-     (setq lsp-enable-symbol-highlighting nil)
-     (setq lsp-signature-auto-activate nil)
-     (setq rustic-format-on-save 1))
+              ("C-c C-c s" . lsp-rust-analyzer-status)))
+(setq rustic-format-on-save t)
+(setq lsp-eldoc-hook nil)
+(setq lsp-enable-symbol-highlighting nil)
+(setq lsp-signature-auto-activate nil)
+
+(use-package flycheck)
 
 (use-package lsp-mode
   :ensure
@@ -103,6 +128,17 @@
   (lsp-ui-peek-always-show t)
   (lsp-ui-sideline-show-hover t)
   (lsp-ui-doc-enable nil))
+
+(define-generic-mode 'bnf-mode 
+'("#") 
+nil 
+'(("^<.*?>" . 'font-lock-variable-name-face) 
+  ("<.*?>" . 'font-lock-keyword-face) 
+  ("::=" . 'font-lock-warning-face) 
+  ("\|" . 'font-lock-warning-face))
+'("\\.bnf\\.pybnf\\'") 
+nil 
+"Major mode for BNF highlighting.")
 
 (use-package magit
   :bind (("C-x g" . magit-status)

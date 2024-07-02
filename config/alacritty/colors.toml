@@ -1,37 +1,37 @@
-# Base16 Nord - alacritty color config
-# arcticicestudio
+# Base16 Rosé Pine - alacritty color config
+# Emilia Dunfelt &lt;edun@dunfelt.se&gt;
 
 [colors]
 draw_bold_text_with_bright_colors = false
 
 # Default colors
 [colors.primary]
-background = '0x2e3440'
-foreground = '0xe5e9f0'
+background = '0x191724'
+foreground = '0xe0def4'
 
 # Colors the cursor will use if `custom_cursor_colors` is true
 [colors.cursor]
-text = '0x2e3440'
-cursor = '0xe5e9f0'
+text = '0x191724'
+cursor = '0xe0def4'
 
 # Normal colors
 [colors.normal]
-black = '0x2e3440'
-red = '0xbf616a'
-green = '0xa3be8c'
-yellow = '0xebcb8b'
-blue = '0x81a1c1'
-magenta = '0xb48ead'
-cyan = '0x88c0d0'
-white = '0xe5e9f0'
+black = '0x191724'
+red = '0xeb6f92'
+green = '0x31748f'
+yellow = '0xebbcba'
+blue = '0xc4a7e7'
+magenta = '0xf6c177'
+cyan = '0x9ccfd8'
+white = '0xe0def4'
 
 # Bright colors
 [colors.bright]
-black = '0x4c566a'
-red = '0xd08770'
-green = '0x3b4252'
-yellow = '0x434c5e'
-blue = '0xd8dee9'
-magenta = '0xeceff4'
-cyan = '0x5e81ac'
-white = '0x8fbcbb'
+black = '0x6e6a86'
+red = '0xf6c177'
+green = '0x1f1d2e'
+yellow = '0x26233a'
+blue = '0x908caa'
+magenta = '0xe0def4'
+cyan = '0x524f67'
+white = '0x524f67'

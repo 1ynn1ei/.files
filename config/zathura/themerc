@@ -1,35 +1,35 @@
-# Base16 Nord
-# Author: arcticicestudio
+# Base16 Rosé Pine
+# Author: Emilia Dunfelt &lt;sayhi@dunfelt.se&gt;
 
-set default-bg                  "#2E3440"
-set default-fg                  "#3B4252"
+set default-bg                  "#191724"
+set default-fg                  "#1f1d2e"
 
-set statusbar-fg                "#D8DEE9"
-set statusbar-bg                "#434C5E"
+set statusbar-fg                "#6e6a86"
+set statusbar-bg                "#26233a"
 
-set inputbar-bg                 "#2E3440"
-set inputbar-fg                 "#8FBCBB"
+set inputbar-bg                 "#191724"
+set inputbar-fg                 "#c5c3ce"
 
-set notification-bg             "#2E3440"
-set notification-fg             "#8FBCBB"
+set notification-bg             "#191724"
+set notification-fg             "#c5c3ce"
 
-set notification-error-bg       "#2E3440"
-set notification-error-fg       "#BF616A"
+set notification-error-bg       "#191724"
+set notification-error-fg       "#e2e1e7"
 
-set notification-warning-bg     "#2E3440"
-set notification-warning-fg     "#BF616A"
+set notification-warning-bg     "#191724"
+set notification-warning-fg     "#e2e1e7"
 
-set highlight-color             "#EBCB8B"
-set highlight-active-color      "#81A1C1"
+set highlight-color             "#f6c177"
+set highlight-active-color      "#9ccfd8"
 
-set completion-bg               "#3B4252"
-set completion-fg               "#81A1C1"
+set completion-bg               "#1f1d2e"
+set completion-fg               "#9ccfd8"
 
-set completion-highlight-fg     "#8FBCBB"
-set completion-highlight-bg     "#81A1C1"
+set completion-highlight-fg     "#c5c3ce"
+set completion-highlight-bg     "#9ccfd8"
 
-set recolor-lightcolor          "#2E3440"
-set recolor-darkcolor           "#ECEFF4"
+set recolor-lightcolor          "#191724"
+set recolor-darkcolor           "#f0f0f3"
 
 set recolor                     "false"
 set recolor-keephue             "false"
