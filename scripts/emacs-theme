@@ -1,0 +1,5 @@
+#!/bin/sh
+
+cp -f $1 ~/.emacs.d/themes/$2-theme.el
+echo "(load-theme (quote $2) t)" > ~/.emacs.d/colors.el
+emacsclient -e "(load-file user-init-file)"

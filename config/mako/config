@@ -7,5 +7,3 @@ width=400
 height=150
 border-size=3
 
-include $HOME/.config/mako/config.d/*
-

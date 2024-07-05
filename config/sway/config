@@ -16,7 +16,7 @@ set $screenshot grim
 # on the original workspace that the command was run on.
 set $menu "rofi -combi-modi window,drun,ssh,run -show combi -show-icons | xargs swaymsg exec -- "
 
-output * bg $HOME/.bg.png fill
+output * bg $HOME/.bg.jpg fill
 
 exec swayidle -w \
          timeout 300 'swaylock -f --image "/home/lynn/.bg.png"' \
@@ -39,7 +39,30 @@ exec swayidle -w \
 input type:keyboard {
       xkb_options ctrl:nocaps
 }
+set $system_theme 'Arc-Dark'
+set $system_icons 'Numix-Square'
+set $system_dpi_scaling_factor 0.4
+set $cursor_size 24
+#set $cursor_theme Breeze
+set $cursor_theme Adwaita
+set $titlebar_text_size 32
+set $titlebar_font Cantarell
+# GTK
+# This is the only place where you must set GTK scaling
+set $gnome-schema org.gnome.desktop.interface
+exec_always {
+  gsettings set $gnome-schema gtk-theme $system_theme
+  gsettings set $gnome-schema icon-theme $system_icons
+  gsettings set $gnome-schema text-scaling-factor $system_dpi_scaling_factor
+  gsettings set $gnome-schema cursor-theme $cursor_theme
+  gsettings set $gnome-schema cursor-size $cursor_size
+}
 
+# Mouse
+seat seat0 xcursor_theme $cursor_theme $cursor_size
+
+# Fonts (For sway window titles only)
+font pango:$titlebar_font $titlebar_text_size
 ### Key bindings
 #
 # Basics:
@@ -168,32 +191,16 @@ bindsym $mod+r mode "resize"
 font Mononoki Nerd Font 14px
 gaps inner 10
 default_border pixel 2
+set $opacity 0.75
+for_window [app_id="org.pwmt.zathura"] opacity $opacity
 
 bar {
   swaybar_command waybar
 }
 
-# Start flavours
-## Base16 Dracula
-# Author: Mike Barkmin (http://github.com/mikebarkmin) based on Dracula Theme (http://github.com/dracula)
+include $HOME/.config/sway/config.d/*
+include /etc/sway/config.d/*
 
-set $base00 #282936
-set $base01 #3a3c4e
-set $base02 #4d4f68
-set $base03 #626483
-set $base04 #62d6e8
-set $base05 #e9e9f4
-set $base06 #f1f2f8
-set $base07 #f7f7fb
-set $base08 #ea51b2
-set $base09 #b45bcf
-set $base0A #00f769
-set $base0B #ebff87
-set $base0C #a1efe4
-set $base0D #62d6e8
-set $base0E #b45bcf
-set $base0F #00f769
-# End flavours
 #                       Border  BG      Text    Ind     Child Border
 client.focused          $base05 $base0D $base00 $base0D $base0D
 client.focused_inactive $base01 $base01 $base05 $base03 $base01
@@ -205,5 +212,3 @@ exec mako
 exec emacs --fg-daemon
 exec light -U 90
 
-include $HOME/.config/sway/config.d/*
-include /etc/sway/config.d/*

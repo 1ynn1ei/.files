@@ -31,9 +31,9 @@
 (setq visible-bell t)
 (setq inhibit-startup-message t)
 
+(load "~/.emacs.d/colors.el")
 (setq custom-theme-directory "~/.emacs.d/themes")
 (set-face-attribute 'default nil :font "Fira Code")
-(use-package base16-theme)
 (use-package all-the-icons
   :if (display-graphic-p))
 (setq x-underline-at-descent-line t)
@@ -75,6 +75,16 @@
  '(variable-pitch ((t (:family "ETBembo" :height 90 :weight thin))))
  '(fixed-pitch ((t ( :family "Fira Code" :height 80)))))
 
+(with-eval-after-load 'ox-latex
+  (add-to-list 'org-latex-classes
+             '("fiction"
+               "\\documentclass[submission,letterpaper,courier]{sffms}
+           [NO-DEFAULT-PACKAGES]
+           [PACKAGES]
+           [EXTRA]"
+               ("\\chapter*{%s}" . "\\chapter*{%s}"))))
+(setq org-latex-hyperref-template "")
+
 (use-package markdown-mode
   :ensure t
   :mode ("README\\.md\\'" . gfm-mode)
@@ -109,7 +119,7 @@
   (lsp-eldoc-render-all nil)
   (lsp-idle-delay 0.6)
   ;; enable / disable the hints as you prefer:
-  (lsp-inlay-hint-enable t)
+  (lsp-inlay-hint-enable nil)
   ;; These are optional configurations. See https://emacs-lsp.github.io/lsp-mode/page/lsp-rust-analyzer/#lsp-rust-analyzer-display-chaining-hints for a full list
   (lsp-rust-analyzer-display-lifetime-elision-hints-enable "skip_trivial")
   (lsp-rust-analyzer-display-chaining-hints t)
@@ -126,8 +136,8 @@
   :commands lsp-ui-mode
   :custom
   (lsp-ui-peek-always-show t)
-  (lsp-ui-sideline-show-hover t)
   (lsp-ui-doc-enable nil))
+;;(setq lsp-ui-sideline-enable nil)
 
 (define-generic-mode 'bnf-mode 
 '("#") 

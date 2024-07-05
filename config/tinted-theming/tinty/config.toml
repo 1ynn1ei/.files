@@ -28,7 +28,7 @@ name = "base16-emacs"
 path = "https://github.com/tinted-theming/base16-emacs"
 theme-file-extension="-theme.el"
 themes-dir="build"
-hook = "cp -f %f ~/.emacs.d/themes/%n-theme.el && emacsclient -e \"(load-theme (quote %n) t)\""
+hook = "emacs-theme %f %n"
 [[items]]
 name = "base16-rofi"
 path = "https://gitlab.com/jordiorlando/base16-rofi"
