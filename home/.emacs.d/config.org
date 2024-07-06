@@ -126,6 +126,10 @@ The following is for custom LaTeX/PDF exports
                ("\\chapter*{%s}" . "\\chapter*{%s}"))))
 (setq org-latex-hyperref-template "")
 #+end_src
+** Export function
+When exporting to LaTeX, I want to expose a quick way to dynamically insert the wordcount. This is useful for sffms.
+#+begin_src emacs-lisp
+#+end_src
 * Programming
 ** Rust
 *** Rustic
