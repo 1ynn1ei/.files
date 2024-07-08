@@ -1,1 +1,1 @@
-(load-theme (quote base16-woodland) t)
+(load-theme (quote base16-eighties) t)

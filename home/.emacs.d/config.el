@@ -1,63 +1,32 @@
-#+TITLE: Lynn Lei Configuration
-#+AUTHOR: Lynn Lei
-#+STARTUP: Overview
-
-This is my working document for my emacs configuration. What follows is notes, annotations, and context for code I've found, or written, to better my experience in emacs. Minimum version is emacs 29
-#+begin_src emacs-lisp
 (let ((minver "29"))
   (when (version< emacs-version minver)
   (error "Your Emacs is too old -- this config requires v%s or higher" minver)))
-#+end_src
-* Keep Our Forests Clean
-#+begin_src emacs-lisp
+
 (use-package no-littering)
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 (setq create-lockfiles nil)
-#+end_src
-* Debug
-Uncomment this for any debugging needs.
-#+begin_src emacs-lisp
+
 (setq debug-on-error t)
-#+end_src
 
-* Manage Packages
-  Order matters, so we always refer to MELPA first. We also add Org, to make sure we get the most updated version of Org.
-
-#+begin_src emacs-lisp
 (require 'package)
 (setq package-archives '(("melpa" . "https://melpa.org/packages/")
                          ("melpa-stable" . "https://stable.melpa.org/packages/")
                          ("org" . "https://orgmode.org/elpa/")
                          ("elpa" . "http://elpa.gnu.org/packages/")))  
 (setq use-package-always-ensure t)
-#+end_src
 
-* Linux
-Specifically for linux, with a tiled window manager, we want to enable frame-only mode so that we can allow the window manager to handle all of the emacs clients, while running a single daemon in the background.
-#+begin_src emacs-lisp
 (use-package frames-only-mode)
-#+end_src
-* User
-Experience / Nuisance Killers
-Never split a new frame on the bottom
-#+begin_src emacs-lisp
+
 (setq
    split-width-threshold 0
    split-height-threshold nil)
-#+end_src
-** Customize
-First we want anything done with emacs customize to go in some other file, instead of cluttering our ~init.el~
-#+begin_src emacs-lisp
+
 (setq custom-file "~/.emacs.d/custom.el")
 (load-file custom-file)
-#+end_src
 
-** Minimize
-The startup message and the bell noise are both inhibitors of concentration, so we kill them. We also can remove some unnecessary bars around the screen, ensuring we have a minimalist view
-#+begin_src emacs-lisp
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 (set-fringe-mode 10)
@@ -65,32 +34,22 @@ The startup message and the bell noise are both inhibitors of concentration, so 
 
 (setq visible-bell t)
 (setq inhibit-startup-message t)
-#+end_src
-** Theme
-Referencing [[https://yannesposito.com/posts/0020-cool-looking-org-mode/index.html][This Blog]] for the basis of setting fonts. I tried Dracula at first, but I need something that has both light and dark mode depending on the computer I have setup, and where I am. Solarized seems fine for this?
-#+begin_src emacs-lisp
+
 (load "~/.emacs.d/colors.el")
 (setq custom-theme-directory "~/.emacs.d/themes")
 (set-face-attribute 'default nil :font "Fira Code")
 (use-package all-the-icons
   :if (display-graphic-p))
 (setq x-underline-at-descent-line t)
-#+end_src
-Let's try out transparent background
-#+begin_src emacs-lisp
+
 (set-frame-parameter (selected-frame) 'alpha-background 75)
 (add-to-list 'default-frame-alist '(alpha-background . 75))
-#+end_src
-** Mode-line
-#+begin_src emacs-lisp
+
 (use-package doom-modeline
 :ensure t
 :hook (after-init . doom-modeline-mode)
 :custom ((doom-modeline-height 10)))
-#+end_src
-* Org Mode
-Using a hook here so everytime we load an org file, it will set these.
-#+begin_src emacs-lisp
+
 (defun ll/org-mode-setup ()
   (org-indent-mode)
   (variable-pitch-mode 1)
@@ -119,9 +78,7 @@ Using a hook here so everytime we load an org file, it will set these.
  'user
  '(variable-pitch ((t (:family "ETBembo" :height 90 :weight thin))))
  '(fixed-pitch ((t ( :family "Fira Code" :height 80)))))
-#+end_src
-The following is for custom LaTeX/PDF exports
-#+begin_src emacs-lisp
+
 (with-eval-after-load 'ox-latex
   (add-to-list 'org-latex-classes
              '("fiction"
@@ -131,14 +88,9 @@ The following is for custom LaTeX/PDF exports
            [EXTRA]"
                ("\\chapter*{%s}" . "\\chapter*{%s}"))))
 (setq org-latex-hyperref-template "")
-#+end_src
-** Export function
-When exporting to LaTeX, I want to expose a quick way to dynamically insert the wordcount. This is useful for sffms.
-#+begin_src emacs-lisp
-#+end_src
-** Writing
-First I want spell check via flyspell:
-#+begin_src emacs-lisp
+
+
+
 (add-hook 'org-mode-hook 'turn-on-flyspell)
 ;; find aspell and hunspell automatically
 (cond
@@ -161,12 +113,7 @@ First I want spell check via flyspell:
   (setq ispell-program-name "aspell")
   ;; Please note ispell-extra-args contains ACTUAL parameters passed to aspell
   (setq ispell-extra-args '("--sug-mode=ultra" "--lang=en_US"))))
-#+end_src
-* Programming
-** Rust
-*** Rustic
-rust-mode with some extra juice.
-#+begin_src emacs-lisp
+
 (use-package markdown-mode
   :ensure t
   :mode ("README\\.md\\'" . gfm-mode)
@@ -189,15 +136,9 @@ rust-mode with some extra juice.
 (setq lsp-eldoc-hook nil)
 (setq lsp-enable-symbol-highlighting nil)
 (setq lsp-signature-auto-activate nil)
-#+end_src
 
-** Flycheck
-This allows for inline errors
-#+begin_src emacs-lisp
 (use-package flycheck)
-#+end_src
-** LSP
-#+begin_src emacs-lisp
+
 (use-package lsp-mode
   :ensure
   :commands lsp
@@ -227,13 +168,6 @@ This allows for inline errors
   (lsp-ui-doc-enable nil))
 ;;(setq lsp-ui-sideline-enable nil)
 
-#+end_src
-#+BEGIN_QUOTE
-lsp-ui is optional. It provides inline overlays over the symbol at point and enables code fixes at point. If you find it to flashy and prefer not activating it just remove :config (add-hook 'lsp-mode-hook 'lsp-ui-mode).
-#+END_QUOTE
-** BNF Mode
-Simple major mode for editing grammar files
-#+begin_src emacs-lisp
 (define-generic-mode 'bnf-mode 
 '("#") 
 nil 
@@ -244,15 +178,11 @@ nil
 '("\\.bnf\\.pybnf\\'") 
 nil 
 "Major mode for BNF highlighting.")
-#+end_src
-* Git
-#+begin_src emacs-lisp
+
 (use-package magit
   :bind (("C-x g" . magit-status)
          ("C-x C-g" . magit-status)))
-#+end_src
-* TODO Vim-ism
-#+begin_src emacs-lisp
+
 (use-package meow :ensure t)
 (defun meow-setup ()
   (setq meow-cheatsheet-layout meow-cheatsheet-layout-qwerty)
@@ -342,9 +272,7 @@ nil
 (require 'meow)
 (meow-setup)
 (meow-global-mode 1)
-#+end_src
-* TODO Finish documentation on these
-#+begin_src emacs-lisp
+
 (use-package swiper)
 (use-package counsel
   :bind (("M-x" . counsel-M-x)
@@ -370,5 +298,3 @@ nil
   :config
   (which-key-mode)
   (setq which-key-idle-delay 1))
-#+end_src
-

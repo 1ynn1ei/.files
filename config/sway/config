@@ -76,6 +76,8 @@ font pango:$titlebar_font $titlebar_text_size
     # Start your launcher
     bindsym $mod+p exec $menu
 
+    # Youtube
+    bindsym $mod+Shift+v exec mpv $(wl-paste)
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.

@@ -1,19 +1,19 @@
 /**
- * Base16 Woodland ROFI Color theme
+ * Base16 Eighties ROFI Color theme
  *
  * Authors
- *  Scheme: Jay Cornwall (https://jcornwall.com)
+ *  Scheme: Chris Kempson (http://chriskempson.com)
  *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
  */
 
 * {
-    red:                         rgba ( 211, 92, 92, 100 % );
-    blue:                        rgba ( 136, 164, 211, 100 % );
-    lightfg:                     rgba ( 215, 200, 188, 100 % );
-    lightbg:                     rgba ( 48, 43, 37, 100 % );
-    foreground:                  rgba ( 202, 188, 177, 100 % );
-    background:                  rgba ( 35, 30, 24, 100 % );
-    background-color:            rgba ( 35, 30, 24, 0 % );
+    red:                         rgba ( 242, 119, 122, 100 % );
+    blue:                        rgba ( 102, 153, 204, 100 % );
+    lightfg:                     rgba ( 232, 230, 223, 100 % );
+    lightbg:                     rgba ( 57, 57, 57, 100 % );
+    foreground:                  rgba ( 211, 208, 200, 100 % );
+    background:                  rgba ( 45, 45, 45, 100 % );
+    background-color:            rgba ( 45, 45, 45, 0 % );
     separatorcolor:              @foreground;
     border-color:                @foreground;
     selected-normal-foreground:  @lightbg;

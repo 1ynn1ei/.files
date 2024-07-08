@@ -1,35 +1,35 @@
-# Base16 Woodland
-# Author: Jay Cornwall (https://jcornwall.com)
+# Base16 Eighties
+# Author: Chris Kempson (http://chriskempson.com)
 
-set default-bg                  "#231e18"
-set default-fg                  "#302b25"
+set default-bg                  "#2d2d2d"
+set default-fg                  "#393939"
 
-set statusbar-fg                "#b4a490"
-set statusbar-bg                "#48413a"
+set statusbar-fg                "#a09f93"
+set statusbar-bg                "#515151"
 
-set inputbar-bg                 "#231e18"
-set inputbar-fg                 "#e4d4c8"
+set inputbar-bg                 "#2d2d2d"
+set inputbar-fg                 "#f2f0ec"
 
-set notification-bg             "#231e18"
-set notification-fg             "#e4d4c8"
+set notification-bg             "#2d2d2d"
+set notification-fg             "#f2f0ec"
 
-set notification-error-bg       "#231e18"
-set notification-error-fg       "#d35c5c"
+set notification-error-bg       "#2d2d2d"
+set notification-error-fg       "#f2777a"
 
-set notification-warning-bg     "#231e18"
-set notification-warning-fg     "#d35c5c"
+set notification-warning-bg     "#2d2d2d"
+set notification-warning-fg     "#f2777a"
 
-set highlight-color             "#e0ac16"
-set highlight-active-color      "#88a4d3"
+set highlight-color             "#ffcc66"
+set highlight-active-color      "#6699cc"
 
-set completion-bg               "#302b25"
-set completion-fg               "#88a4d3"
+set completion-bg               "#393939"
+set completion-fg               "#6699cc"
 
-set completion-highlight-fg     "#e4d4c8"
-set completion-highlight-bg     "#88a4d3"
+set completion-highlight-fg     "#f2f0ec"
+set completion-highlight-bg     "#6699cc"
 
-set recolor-lightcolor          "#231e18"
-set recolor-darkcolor           "#d7c8bc"
+set recolor-lightcolor          "#2d2d2d"
+set recolor-darkcolor           "#e8e6df"
 
 set recolor                     "false"
 set recolor-keephue             "false"

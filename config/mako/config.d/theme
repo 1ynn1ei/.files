@@ -1,18 +1,18 @@
-## Base16 Woodland
-# Author: Jay Cornwall (https://jcornwall.com)
+## Base16 Eighties
+# Author: Chris Kempson (http://chriskempson.com)
 #
 # You can use these variables anywhere in the mako configuration file.
 
-background-color=#231e18
-text-color=#cabcb1
-border-color=#88a4d3
+background-color=#2d2d2d
+text-color=#d3d0c8
+border-color=#6699cc
 
 [urgency=low]
-background-color=#231e18
-text-color=#e0ac16
-border-color=#88a4d3
+background-color=#2d2d2d
+text-color=#ffcc66
+border-color=#6699cc
 
 [urgency=high]
-background-color=#231e18
-text-color=#d35c5c
-border-color=#88a4d3
+background-color=#2d2d2d
+text-color=#f2777a
+border-color=#6699cc

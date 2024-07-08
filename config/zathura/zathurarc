@@ -18,7 +18,7 @@ map index j navigate_index down
 
 #theme
 include themerc
-set default-bg rgba(0,0,0,0.7)
+set default-bg rgba(45,45,45,0.7)
 set recolor-lightcolor rgba(0,0,0,0)
 
 set adjust-open width
