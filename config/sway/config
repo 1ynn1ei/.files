@@ -16,7 +16,7 @@ set $screenshot grim
 # on the original workspace that the command was run on.
 set $menu "rofi -combi-modi window,drun,ssh,run -show combi -show-icons | xargs swaymsg exec -- "
 
-output * bg $HOME/.bg.png fill
+output * scale 1 bg $HOME/.bg.png fill
 
 exec swayidle -w \
          timeout 300 'swaylock -f --image "/home/lynn/.bg.png"' \
