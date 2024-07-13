@@ -31,6 +31,7 @@ Uncomment this for any debugging needs.
 (setq package-archives '(("melpa" . "https://melpa.org/packages/")
                          ("melpa-stable" . "https://stable.melpa.org/packages/")
                          ("org" . "https://orgmode.org/elpa/")
+			 ("nongnu" . "https://elpa.nongnu.org/nongnu/")
                          ("elpa" . "http://elpa.gnu.org/packages/")))  
 (setq use-package-always-ensure t)
 #+end_src
@@ -39,6 +40,16 @@ Uncomment this for any debugging needs.
 Specifically for linux, with a tiled window manager, we want to enable frame-only mode so that we can allow the window manager to handle all of the emacs clients, while running a single daemon in the background.
 #+begin_src emacs-lisp
 (use-package frames-only-mode)
+#+end_src
+** Terminal
+#+begin_src emacs-lisp
+(use-package eat)
+(defun ll/open-ncspot ()
+  (eat-other-window)
+  (rename-buffer "ncspot" nil)
+  (eat-line-send-input "ncspot")
+  (vterm-send-return))
+
 #+end_src
 * User
 Experience / Nuisance Killers
@@ -78,8 +89,8 @@ Referencing [[https://yannesposito.com/posts/0020-cool-looking-org-mode/index.ht
 #+end_src
 Let's try out transparent background
 #+begin_src emacs-lisp
-(set-frame-parameter (selected-frame) 'alpha-background 75)
-(add-to-list 'default-frame-alist '(alpha-background . 75))
+(set-frame-parameter (selected-frame) 'alpha-background 85)
+(add-to-list 'default-frame-alist '(alpha-background . 85))
 #+end_src
 ** Mode-line
 #+begin_src emacs-lisp
@@ -132,6 +143,36 @@ The following is for custom LaTeX/PDF exports
                ("\\chapter*{%s}" . "\\chapter*{%s}"))))
 (setq org-latex-hyperref-template "")
 #+end_src
+** Time & Agenda
+#+begin_src emacs-lisp
+(setq org-todo-keywords
+      '((sequence "TODO" "HOLD" "WORKING" "TESTING" "COMPLETE")))
+
+(setq org-clock-in-switch-to-state "WORKING")
+(setq org-clock-out-switch-to-state "HOLD")
+
+(defun ll/org-agenda-open-hook ()
+  "hook ran when opening org-agenda"
+  (olivetti-mode))
+
+(add-hook 'org-agenda-mode-hook 'll/org-agenda-open-hook)
+(setq org-agenda-custom-commands
+      '(("d" "Today's Tasks"
+	 ((agenda "" ((org-agenda-span 1)
+		      (org-agenda-overriding-header "Today's Tasks")))))))
+
+(setq org-agenda-files
+      (directory-files-recursively "~/Documents/org/" "\\.org$"))
+
+(defun ll/org-agenda-view-day ()
+    (interactive)
+  (org-agenda nil "d"))
+
+
+(keymap-global-set "C-c a" #'ll/org-agenda-view-day)
+
+
+#+end_src
 ** Export function
 When exporting to LaTeX, I want to expose a quick way to dynamically insert the wordcount. This is useful for sffms.
 #+begin_src emacs-lisp
@@ -162,6 +203,10 @@ First I want spell check via flyspell:
   ;; Please note ispell-extra-args contains ACTUAL parameters passed to aspell
   (setq ispell-extra-args '("--sug-mode=ultra" "--lang=en_US"))))
 #+end_src
+Olivetti mode makes things look a bit "better"
+#+begin_src emacs-lisp
+(use-package olivetti)
+#+end_src emacs-lisp
 * Programming
 ** Rust
 *** Rustic
@@ -195,6 +240,32 @@ rust-mode with some extra juice.
 This allows for inline errors
 #+begin_src emacs-lisp
 (use-package flycheck)
+(use-package flycheck-pos-tip)
+(with-eval-after-load 'flycheck
+  (flycheck-pos-tip-mode))
+(flycheck-define-checker vale
+  "A checker for prose"
+  :command ("vale" "--output" "line"
+            source)
+  :standard-input nil
+  :error-patterns
+  ((error line-start (file-name) ":" line ":" column ":" (id (one-or-more (not (any ":")))) ":" (message) line-end))
+  :modes (markdown-mode org-mode text-mode)
+  )
+(add-to-list 'flycheck-checkers 'vale 'append)
+
+#+end_src
+** Company Auto Complete
+#+begin_src emacs-lisp
+(use-package company
+  :custom
+  (company-idle-delay 0.5)
+  :bind
+  (:map company-active-map
+	("C-n" . company-select-next)
+	("C-p" . company-select-previous)
+	("M-<" . company-select-first)
+	("M->" . company-select-last)))
 #+end_src
 ** LSP
 #+begin_src emacs-lisp

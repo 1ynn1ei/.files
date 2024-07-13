@@ -25,4 +25,4 @@ y = 1
 program = "/usr/bin/fish"
 
 [window]
-opacity = 0.75
+opacity = 0.85

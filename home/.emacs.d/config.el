@@ -15,10 +15,18 @@
 (setq package-archives '(("melpa" . "https://melpa.org/packages/")
                          ("melpa-stable" . "https://stable.melpa.org/packages/")
                          ("org" . "https://orgmode.org/elpa/")
+			 ("nongnu" . "https://elpa.nongnu.org/nongnu/")
                          ("elpa" . "http://elpa.gnu.org/packages/")))  
 (setq use-package-always-ensure t)
 
 (use-package frames-only-mode)
+
+(use-package eat)
+(defun ll/open-ncspot ()
+  (eat-other-window)
+  (rename-buffer "ncspot" nil)
+  (eat-line-send-input "ncspot")
+  (vterm-send-return))
 
 (setq
    split-width-threshold 0
@@ -42,8 +50,8 @@
   :if (display-graphic-p))
 (setq x-underline-at-descent-line t)
 
-(set-frame-parameter (selected-frame) 'alpha-background 75)
-(add-to-list 'default-frame-alist '(alpha-background . 75))
+(set-frame-parameter (selected-frame) 'alpha-background 85)
+(add-to-list 'default-frame-alist '(alpha-background . 85))
 
 (use-package doom-modeline
 :ensure t
@@ -88,6 +96,32 @@
            [EXTRA]"
                ("\\chapter*{%s}" . "\\chapter*{%s}"))))
 (setq org-latex-hyperref-template "")
+
+(setq org-todo-keywords
+      '((sequence "TODO" "HOLD" "WORKING" "TESTING" "COMPLETE")))
+
+(setq org-clock-in-switch-to-state "WORKING")
+(setq org-clock-out-switch-to-state "HOLD")
+
+(defun ll/org-agenda-open-hook ()
+  "hook ran when opening org-agenda"
+  (olivetti-mode))
+
+(add-hook 'org-agenda-mode-hook 'll/org-agenda-open-hook)
+(setq org-agenda-custom-commands
+      '(("d" "Today's Tasks"
+	 ((agenda "" ((org-agenda-span 1)
+		      (org-agenda-overriding-header "Today's Tasks")))))))
+
+(setq org-agenda-files
+      (directory-files-recursively "~/Documents/org/" "\\.org$"))
+
+(defun ll/org-agenda-view-day ()
+    (interactive)
+  (org-agenda nil "d"))
+
+
+(keymap-global-set "C-c a" #'ll/org-agenda-view-day)
 
 
 
@@ -138,6 +172,29 @@
 (setq lsp-signature-auto-activate nil)
 
 (use-package flycheck)
+(use-package flycheck-pos-tip)
+(with-eval-after-load 'flycheck
+  (flycheck-pos-tip-mode))
+(flycheck-define-checker vale
+  "A checker for prose"
+  :command ("vale" "--output" "line"
+            source)
+  :standard-input nil
+  :error-patterns
+  ((error line-start (file-name) ":" line ":" column ":" (id (one-or-more (not (any ":")))) ":" (message) line-end))
+  :modes (markdown-mode org-mode text-mode)
+  )
+(add-to-list 'flycheck-checkers 'vale 'append)
+
+(use-package company
+  :custom
+  (company-idle-delay 0.5)
+  :bind
+  (:map company-active-map
+	("C-n" . company-select-next)
+	("C-p" . company-select-previous)
+	("M-<" . company-select-first)
+	("M->" . company-select-last)))
 
 (use-package lsp-mode
   :ensure

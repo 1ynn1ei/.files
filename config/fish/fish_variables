@@ -1,5 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export QT_AUTO_SCREEN_SCALE_FACTOR:1
+SETUVAR --export QT_ENABLE_HIGHDPI_SCALING:1
 SETUVAR --export TRFZF_ENABLE_FZF_DEFAULT_OPTS:0
 SETUVAR VIRTUAL_ENV_DISABLE_PROMPT:true
 SETUVAR --export XDG_RUNTIME_DIR:/run/user/1000

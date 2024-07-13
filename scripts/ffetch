@@ -1,0 +1,2 @@
+#!/bin/sh
+clear && fastfetch --raw ~/.scripts/logo.sixel --logo-width 50 --logo-height 25
