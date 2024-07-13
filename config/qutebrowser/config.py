@@ -1276,14 +1276,14 @@ c.colors.webpage.preferred_color_scheme = 'dark'
 ## font setting, it's replaced with the fonts listed here. If set to an
 ## empty value, a system-specific monospace default is used.
 ## Type: List of Font, or Font
-c.fonts.default_family = ["Fira Code"]
+c.fonts.default_family = ["Mononoki Nerd Font"]
 
 ## Default font size to use. Whenever "default_size" is used in a font
 ## setting, it's replaced with the size listed here. Valid values are
 ## either a float value with a "pt" suffix, or an integer value with a
 ## "px" suffix.
 ## Type: String
-# c.fonts.default_size = '10pt'
+c.fonts.default_size = '20pt'
 
 ## Font used for the downloadbar.
 ## Type: Font
@@ -1713,7 +1713,7 @@ c.fonts.default_family = ["Fira Code"]
 ## alternative to this, it's possible to set font sizes and the
 ## `zoom.default` setting.
 ## Type: Bool
-# c.qt.highdpi = False
+c.qt.highdpi = True
 
 ## Disable accelerated 2d canvas to avoid graphical glitches. On some
 ## setups graphical issues can occur on sites like Google sheets and
@@ -2155,7 +2155,7 @@ c.tabs.show = 'multiple'
 ## Hide the window decoration.  This setting requires a restart on
 ## Wayland.
 ## Type: Bool
-# c.window.hide_decoration = False
+c.window.hide_decoration = True
 
 ## Format to use for the window title. The same placeholders like for
 ## `tabs.title.format` are defined.
@@ -2173,7 +2173,7 @@ c.tabs.show = 'multiple'
 
 ## Default zoom level.
 ## Type: Perc
-c.zoom.default = '70%'
+c.zoom.default = '150%'
 
 ## Available zoom levels.
 ## Type: List of Perc

@@ -7,14 +7,13 @@ window#waybar {
 * {
     border: none;
     border-radius: 0;
-    font-family: "Fira Code";
-    font-size: 13px;
+    font-family: "Mononoki Nerd Font";
+    font-size: 20px;
     min-height: 0;
 }
 
 #window {
     font-weight: bold;
-    font-family: "Fira Code";
 }
 
 #workspaces button {

@@ -39,7 +39,7 @@ exec swayidle -w \
 input type:keyboard {
       xkb_options ctrl:nocaps
 }
-set $system_theme 'Arc-Dark'
+set $system_theme 'FlatColor'
 set $system_icons 'Numix-Square'
 set $system_dpi_scaling_factor 0.4
 set $cursor_size 24

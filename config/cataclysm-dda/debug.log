@@ -405,3 +405,20 @@ Backtrace emission took 47 seconds.
 11:34:14.392 : Log shutdown.
 -----------------------------------------
 
+
+
+-----------------------------------------
+15:44:01.359 : Starting log.
+15:44:01.359 INFO : Cataclysm DDA version 0.H-219-g47cb4c4608
+15:44:01.361 INFO : [main] C locale set to LC_CTYPE=en_US.UTF-8;LC_NUMERIC=en_US.UTF-8;LC_TIME=en_US.UTF-8;LC_COLLATE=C;LC_MONETARY=en_US.UTF-8;LC_MESSAGES=en_US.UTF-8;LC_PAPER=en_US.UTF-8;LC_NAME=en_US.UTF-8;LC_ADDRESS=en_US.UTF-8;LC_TELEPHONE=en_US.UTF-8;LC_MEASUREMENT=en_US.UTF-8;LC_IDENTIFICATION=en_US.UTF-8
+15:44:01.361 INFO : [main] C++ locale set to LC_CTYPE=en_US.UTF-8;LC_NUMERIC=en_US.UTF-8;LC_TIME=en_US.UTF-8;LC_COLLATE=C;LC_MONETARY=en_US.UTF-8;LC_MESSAGES=en_US.UTF-8;LC_PAPER=en_US.UTF-8;LC_NAME=en_US.UTF-8;LC_ADDRESS=en_US.UTF-8;LC_TELEPHONE=en_US.UTF-8;LC_MEASUREMENT=en_US.UTF-8;LC_IDENTIFICATION=en_US.UTF-8
+15:44:01.361 INFO : SDL version used during compile is 2.30.4
+15:44:01.362 INFO : SDL version used during linking and in runtime is 2.30.4
+15:44:01.395 INFO : SDL render devices: software, opengl, opengles2, opengles
+15:44:01.397 INFO : [options] C locale set to LC_CTYPE=en_US.UTF-8;LC_NUMERIC=en_US.UTF-8;LC_TIME=en_US.UTF-8;LC_COLLATE=C;LC_MONETARY=en_US.UTF-8;LC_MESSAGES=en_US.UTF-8;LC_PAPER=en_US.UTF-8;LC_NAME=en_US.UTF-8;LC_ADDRESS=en_US.UTF-8;LC_TELEPHONE=en_US.UTF-8;LC_MEASUREMENT=en_US.UTF-8;LC_IDENTIFICATION=en_US.UTF-8
+15:44:01.397 INFO : [options] C++ locale set to LC_CTYPE=en_US.UTF-8;LC_NUMERIC=en_US.UTF-8;LC_TIME=en_US.UTF-8;LC_COLLATE=C;LC_MONETARY=en_US.UTF-8;LC_MESSAGES=en_US.UTF-8;LC_PAPER=en_US.UTF-8;LC_NAME=en_US.UTF-8;LC_ADDRESS=en_US.UTF-8;LC_TELEPHONE=en_US.UTF-8;LC_MEASUREMENT=en_US.UTF-8;LC_IDENTIFICATION=en_US.UTF-8
+15:44:01.416 INFO : Active renderer: 3/software
+15:44:01.597 INFO : USE_COLOR_MODULATED_TEXTURES is set to 0
+15:44:37.259 : Log shutdown.
+-----------------------------------------
+

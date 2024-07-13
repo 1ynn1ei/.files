@@ -82,7 +82,7 @@ Referencing [[https://yannesposito.com/posts/0020-cool-looking-org-mode/index.ht
 #+begin_src emacs-lisp
 (load "~/.emacs.d/colors.el")
 (setq custom-theme-directory "~/.emacs.d/themes")
-(set-face-attribute 'default nil :font "Fira Code")
+(set-face-attribute 'default nil :font "Mononoki Nerd Font Mono" :height 180)
 (use-package all-the-icons
   :if (display-graphic-p))
 (setq x-underline-at-descent-line t)
@@ -128,8 +128,8 @@ Using a hook here so everytime we load an org file, it will set these.
 
 (custom-theme-set-faces
  'user
- '(variable-pitch ((t (:family "ETBembo" :height 90 :weight thin))))
- '(fixed-pitch ((t ( :family "Fira Code" :height 80)))))
+ '(variable-pitch ((t (:family "ETBembo" :height 180))))
+ '(fixed-pitch ((t ( :family "Mononoki Nerd Font" )))))
 #+end_src
 The following is for custom LaTeX/PDF exports
 #+begin_src emacs-lisp

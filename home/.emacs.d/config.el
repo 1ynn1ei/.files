@@ -45,7 +45,7 @@
 
 (load "~/.emacs.d/colors.el")
 (setq custom-theme-directory "~/.emacs.d/themes")
-(set-face-attribute 'default nil :font "Fira Code")
+(set-face-attribute 'default nil :font "Mononoki Nerd Font Mono" :height 180)
 (use-package all-the-icons
   :if (display-graphic-p))
 (setq x-underline-at-descent-line t)
@@ -84,8 +84,8 @@
 
 (custom-theme-set-faces
  'user
- '(variable-pitch ((t (:family "ETBembo" :height 90 :weight thin))))
- '(fixed-pitch ((t ( :family "Fira Code" :height 80)))))
+ '(variable-pitch ((t (:family "ETBembo" :height 180))))
+ '(fixed-pitch ((t ( :family "Mononoki Nerd Font" )))))
 
 (with-eval-after-load 'ox-latex
   (add-to-list 'org-latex-classes

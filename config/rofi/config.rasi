@@ -58,6 +58,8 @@ window {
     padding:          5;
     background-color: var(background);
     border:           1;
+    width: calc(50%);
+    font: "Mononoki Nerd Font 20";
 }
 mainbox {
     padding: 0;

@@ -107,7 +107,7 @@
   { "info": "If true, the title screen will use the art appropriate for the season.", "default": "Default: True", "name": "SEASONAL_TITLE", "value": "true" },
   { "info": "Set the probability of the alternate title screen appearing.", "default": "Default: 10 - Min: 0, Max: 100", "name": "ALT_TITLE", "value": "10" },
   { "info": "Set the size of the terminal along the X axis.", "default": "Default: 80 - Min: 80, Max: 960", "name": "TERMINAL_X", "value": "177" },
-  { "info": "Set the size of the terminal along the Y axis.", "default": "Default: 24 - Min: 24, Max: 270", "name": "TERMINAL_Y", "value": "26" },
+  { "info": "Set the size of the terminal along the Y axis.", "default": "Default: 24 - Min: 24, Max: 270", "name": "TERMINAL_Y", "value": "109" },
   { "info": "If true, vector fonts may look better.", "default": "Default: False", "name": "FONT_BLENDING", "value": "false" },
   { "info": "Set the font width.  Requires restart.", "default": "Default: 8 - Min: 6, Max: 100", "name": "FONT_WIDTH", "value": "8" },
   { "info": "Set the font height.  Requires restart.", "default": "Default: 16 - Min: 8, Max: 100", "name": "FONT_HEIGHT", "value": "16" },
