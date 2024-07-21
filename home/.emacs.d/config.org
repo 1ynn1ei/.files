@@ -99,11 +99,18 @@ Let's try out transparent background
 :hook (after-init . doom-modeline-mode)
 :custom ((doom-modeline-height 10)))
 #+end_src
+* HTML
+#+begin_src emacs-lisp
+(use-package simple-httpd)
+(use-package htmlize)
+#+end_src
 * Org Mode
 Using a hook here so everytime we load an org file, it will set these.
 #+begin_src emacs-lisp
 (defun ll/org-mode-setup ()
   (org-indent-mode)
+  (org-modern-mode)
+  (mixed-pitch-mode)
   (variable-pitch-mode 1)
   (auto-fill-mode 0)
   (visual-line-mode 1))
@@ -113,9 +120,8 @@ Using a hook here so everytime we load an org file, it will set these.
   :config
   (setq org-ellipsis " [x]"))
 
-(use-package org-bullets
-  :config
-  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+(use-package org-modern)
+(use-package mixed-pitch)
 
 (setq org-adapt-indentation t
       org-hide-leading-stars t
@@ -146,10 +152,10 @@ The following is for custom LaTeX/PDF exports
 ** Time & Agenda
 #+begin_src emacs-lisp
 (setq org-todo-keywords
-      '((sequence "TODO" "HOLD" "WORKING" "TESTING" "COMPLETE")))
+      '((sequence "TODO" "HOLD" "WORKING" "REVIEW" "COMPLETE")))
 
 (setq org-clock-in-switch-to-state "WORKING")
-(setq org-clock-out-switch-to-state "HOLD")
+(setq org-clock-out-switch-to-state "TODO")
 
 (defun ll/org-agenda-open-hook ()
   "hook ran when opening org-agenda"
@@ -168,8 +174,12 @@ The following is for custom LaTeX/PDF exports
     (interactive)
   (org-agenda nil "d"))
 
+(defun ll/org-agenda-view-todos ()
+  (interactive)
+  (org-agenda nil "t"))
 
-(keymap-global-set "C-c a" #'ll/org-agenda-view-day)
+(keymap-global-set "C-c d a d" #'ll/org-agenda-view-day)
+(keymap-global-set "C-c d a t" #'ll/org-agenda-view-todos)
 
 
 #+end_src
@@ -208,6 +218,10 @@ Olivetti mode makes things look a bit "better"
 (use-package olivetti)
 #+end_src emacs-lisp
 * Programming
+** TODO Coloring
+#+begin_src emacs-lisp
+(use-package rainbow-mode)
+#+end_src
 ** Rust
 *** Rustic
 rust-mode with some extra juice.

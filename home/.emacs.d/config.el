@@ -58,8 +58,13 @@
 :hook (after-init . doom-modeline-mode)
 :custom ((doom-modeline-height 10)))
 
+(use-package simple-httpd)
+(use-package htmlize)
+
 (defun ll/org-mode-setup ()
   (org-indent-mode)
+  (org-modern-mode)
+  (mixed-pitch-mode)
   (variable-pitch-mode 1)
   (auto-fill-mode 0)
   (visual-line-mode 1))
@@ -69,9 +74,8 @@
   :config
   (setq org-ellipsis " [x]"))
 
-(use-package org-bullets
-  :config
-  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+(use-package org-modern)
+(use-package mixed-pitch)
 
 (setq org-adapt-indentation t
       org-hide-leading-stars t
@@ -98,10 +102,10 @@
 (setq org-latex-hyperref-template "")
 
 (setq org-todo-keywords
-      '((sequence "TODO" "HOLD" "WORKING" "TESTING" "COMPLETE")))
+      '((sequence "TODO" "HOLD" "WORKING" "REVIEW" "COMPLETE")))
 
 (setq org-clock-in-switch-to-state "WORKING")
-(setq org-clock-out-switch-to-state "HOLD")
+(setq org-clock-out-switch-to-state "TODO")
 
 (defun ll/org-agenda-open-hook ()
   "hook ran when opening org-agenda"
@@ -120,8 +124,12 @@
     (interactive)
   (org-agenda nil "d"))
 
+(defun ll/org-agenda-view-todos ()
+  (interactive)
+  (org-agenda nil "t"))
 
-(keymap-global-set "C-c a" #'ll/org-agenda-view-day)
+(keymap-global-set "C-c d a d" #'ll/org-agenda-view-day)
+(keymap-global-set "C-c d a t" #'ll/org-agenda-view-todos)
 
 
 
@@ -147,6 +155,8 @@
   (setq ispell-program-name "aspell")
   ;; Please note ispell-extra-args contains ACTUAL parameters passed to aspell
   (setq ispell-extra-args '("--sug-mode=ultra" "--lang=en_US"))))
+
+(use-package rainbow-mode)
 
 (use-package markdown-mode
   :ensure t

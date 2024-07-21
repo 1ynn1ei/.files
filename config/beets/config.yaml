@@ -1,0 +1,16 @@
+directory: ~/Music/
+library: ~/data/musiclibrary.db
+plugins: the fetchart embedart scrub lastgenre
+import:
+    move: yes
+threaded: yes    
+paths:
+    default: %the{$albumartist}/$original_year-$original_month-$original_day - $album%aunique{} [%upper{$albumtype}] (%upper{$format})/$disc-$track - $title ($bitrate)
+    singleton: "#Non-Album/$artist/$title"
+    comp: "#Compilations/%the{$albumartist}/$original_year-$original_month - $album%aunique{} [%upper{$albumtype}] (%upper{$format})/$disc-$track - $title ($bitrate)"
+fetchart:
+    midwidth: 400
+    enforce_ratio: 10px
+    sources: filesystem itunes amazon albumart coverart
+embedart:
+    auto: no

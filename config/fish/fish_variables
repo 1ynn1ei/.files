@@ -1,9 +1,15 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export GPG_TTY:/dev/pts/1
+SETUVAR --export GTK2_RC_FILES:\x1d
+SETUVAR --export GTK_USE_PORTAL:1
 SETUVAR --export QT_AUTO_SCREEN_SCALE_FACTOR:1
 SETUVAR --export QT_ENABLE_HIGHDPI_SCALING:1
+SETUVAR --export QT_QPA_PLATFORMTHEME:gt5ct
+SETUVAR --export QT_WAYLAND_FORCE_DPI:140
 SETUVAR --export TRFZF_ENABLE_FZF_DEFAULT_OPTS:0
 SETUVAR VIRTUAL_ENV_DISABLE_PROMPT:true
+SETUVAR --export XDG_CURRENT_DESKTOP:sway
 SETUVAR --export XDG_RUNTIME_DIR:/run/user/1000
 SETUVAR --export YTFZF_EXTMENU:\x20rofi\x20\x2ddmenu\x20\x2dfuzzy\x20\x2dwidth\x201500
 SETUVAR __fish_initialized:3400
@@ -52,3 +58,4 @@ SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
 SETUVAR fish_user_paths:/home/lynn/\x2escripts\x1e/home/lynn/\x2ecargo/bin
+SETUVAR --export sway:\x1d
